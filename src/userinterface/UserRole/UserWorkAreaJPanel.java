@@ -181,6 +181,10 @@ public class UserWorkAreaJPanel extends javax.swing.JPanel {
 
     private void nutritionConsultationBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nutritionConsultationBtnActionPerformed
         // TODO add your handling code here:
+        // TODO add your handling code here:
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+         userProcessContainer.add("UserFitnessRequestJPanel", new userinterface.UserRole.UserFitnessRequestJPanel(userProcessContainer,userAccount,enterprise,organization,system,network));
+         layout.next(userProcessContainer);
         
     }//GEN-LAST:event_nutritionConsultationBtnActionPerformed
 

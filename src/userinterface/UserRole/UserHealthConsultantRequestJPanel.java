@@ -161,7 +161,6 @@ public class UserHealthConsultantRequestJPanel extends javax.swing.JPanel {
 
     private void docReqJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_docReqJButtonActionPerformed
         // TODO add your handling code here:
-        // send a 
         if(userNameJTxtFld.getText().trim().equals("") && heartBeatJTxtFld.getText().trim().equals("")){
             JOptionPane.showMessageDialog(null, "please enter the name");
             return;
@@ -171,8 +170,8 @@ public class UserHealthConsultantRequestJPanel extends javax.swing.JPanel {
         userHC.setUserName(userNameJTxtFld.getText().trim());
         System.out.println("ented username is "+userHC.getUserName());
         userHC.setHeartBeat(Integer.parseInt(heartBeatJTxtFld.getText().trim())); // added username and HeartBeat 
-        userHC.setUser(userAccount);
-        userHC.setStatus("Requested!!");
+        userHC.setSender(userAccount);
+        userHC.setStatus("waiting");
         
         //get Doctor Org 
         Organization org = null;

@@ -20,12 +20,14 @@ import Business.WorkQueue.PharmacyWorkRequest;
 import Business.WorkQueue.UserDoctorWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
+import java.awt.Component;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 import org.apache.log4j.Logger;
 import userinterface.HealthConsultantRole.HealthConsultantJPanel;
+import userinterface.UserRole.UserWorkAreaJPanel;
 
 /**
  *
@@ -42,6 +44,7 @@ public class HealthConsultantJPanel extends javax.swing.JPanel {
     private Enterprise enterprise;
     private UserAccount userAccount;
     private  WellnessPlatformOrganization wellnessPlatformOrganization;
+    private HealthConsultationOrganization healthConsultationOrganization;
     private Network network;
     private EcoSystem system;
     
@@ -51,8 +54,8 @@ public class HealthConsultantJPanel extends javax.swing.JPanel {
     public HealthConsultantJPanel(JPanel userProcessContainer, UserAccount account, HealthConsultationOrganization healthConsultationOrganization, Enterprise enterprise, EcoSystem system, Network network) {
         
         this.userProcessContainer = userProcessContainer;
-        this.userAccount = userAccount;
-        this.wellnessPlatformOrganization= wellnessPlatformOrganization;
+        this.userAccount = account;
+        this.healthConsultationOrganization= healthConsultationOrganization;
         this.enterprise = enterprise;
         this.network = network;
         this.system = system;
@@ -93,6 +96,7 @@ public class HealthConsultantJPanel extends javax.swing.JPanel {
             row[1] = hcWorkRequest.getHeartBeat();
             row[2] = hcWorkRequest.getUserName();
             row[3] = hcWorkRequest.getStatus();
+            //row[4] = hcWorkRequest;
             model.addRow(row);
         }
     
@@ -108,15 +112,17 @@ public class HealthConsultantJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        studyCaseBtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         hcTable = new javax.swing.JTable();
+        assignMeBtn = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
-        jButton1.setText("Study Case");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        studyCaseBtn.setText("Study Case");
+        studyCaseBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                studyCaseBtnActionPerformed(evt);
             }
         });
 
@@ -124,32 +130,53 @@ public class HealthConsultantJPanel extends javax.swing.JPanel {
 
         hcTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Title 1", "Title 2", "Title 3", "Title 4", "Reviever "
             }
         ));
         jScrollPane1.setViewportView(hcTable);
+
+        assignMeBtn.setText("Assign to Me");
+        assignMeBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                assignMeBtnActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("<--Back");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(74, 74, 74))
             .addGroup(layout.createSequentialGroup()
-                .addGap(154, 154, 154)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 699, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(154, 154, 154)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 771, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addComponent(jButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(assignMeBtn)
+                        .addGap(155, 155, 155)
+                        .addComponent(studyCaseBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -159,41 +186,89 @@ public class HealthConsultantJPanel extends javax.swing.JPanel {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(155, 155, 155))
+                .addGap(101, 101, 101)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(assignMeBtn)
+                    .addComponent(studyCaseBtn)
+                    .addComponent(jButton1))
+                .addContainerGap(168, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void studyCaseBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studyCaseBtnActionPerformed
         // TODO add your handling code here:
         
         // select the work queue.
         int selectedHCRequest = hcTable.getSelectedRow();
         
          if(selectedHCRequest >= 0){
-           
-           
+             
            UserDoctorWorkRequest HCPcrequest =(UserDoctorWorkRequest)hcTable.getValueAt(selectedHCRequest, 0);
-           HCPcrequest.setStatus("Prescription");
+           System.out.println("recevier from table "+HCPcrequest.getReceiver().getUsername());
+           System.out.println("recevier User account "+userAccount.getUsername());
+           if(HCPcrequest.getReceiver().getUsername().equalsIgnoreCase(userAccount.getUsername())){
+                HCPcrequest.setStatus("prescription");
+                HealthConsultantPharmaJPanel processWorkRequestJPanel = new HealthConsultantPharmaJPanel(userProcessContainer, userAccount, wellnessPlatformOrganization, enterprise, system);
+                userProcessContainer.add("processWorkRequestJPanel", processWorkRequestJPanel);
+                CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+                layout.next(userProcessContainer);
+           }
+           else{
+               JOptionPane.showMessageDialog(null, "Person is selected by nother doctor");
+           }
            
-           HealthConsultantPharmaJPanel processWorkRequestJPanel = new HealthConsultantPharmaJPanel(userProcessContainer, userAccount, wellnessPlatformOrganization, enterprise, system);
-            userProcessContainer.add("processWorkRequestJPanel", processWorkRequestJPanel);
-            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-            layout.next(userProcessContainer);
+           
        }else{
            JOptionPane.showMessageDialog(null, "Please Select any row");
        }
         
         
         
+    }//GEN-LAST:event_studyCaseBtnActionPerformed
+
+    private void assignMeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignMeBtnActionPerformed
+        // TODO add your handling code here:
+        
+        // allow assign only if the status is waiting.. else return 
+        int selectedHCRequest = hcTable.getSelectedRow();
+        
+         if(selectedHCRequest >= 0){
+             UserDoctorWorkRequest HCPcrequest =(UserDoctorWorkRequest)hcTable.getValueAt(selectedHCRequest, 0);
+            String status = HCPcrequest.getStatus();
+            if(status.equalsIgnoreCase("waiting")){ // positive case
+                //System.out.println("you are assigned to "+this.userAccount.getUsername());
+                HCPcrequest.setReceiver(userAccount);
+                System.out.println("The receiver is "+HCPcrequest.getReceiver());
+                HCPcrequest.setStatus("Assigned");   
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "Sorry, patient is already assigned. Please select another Person ");
+                return;
+            }
+         }
+         else{
+             System.out.println("Please select a row");
+         }
+         
+         
+         // pupulate the fresh updated table 
+         populateTable();
+        
+        
+    }//GEN-LAST:event_assignMeBtnActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+     
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton assignMeBtn;
     private javax.swing.JTable hcTable;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton studyCaseBtn;
     // End of variables declaration//GEN-END:variables
 }

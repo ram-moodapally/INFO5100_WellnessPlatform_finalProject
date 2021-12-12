@@ -7,6 +7,7 @@ package userinterface.HealthConsultantRole;
 
 import Business.EcoSystem;
 import Business.Enterprise.ConsultationEnterprise;
+import Business.Enterprise.EcommerceEnterprise;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.HealthConsultationOrganization;
@@ -20,6 +21,9 @@ import javax.swing.JOptionPane;
 import Business.Organization.PharmaOrganization;
 import javax.swing.JPanel;
 import Business.DB4OUtil.DB4OUtil;
+import java.awt.CardLayout;
+import java.awt.Component;
+import userinterface.UserRole.UserWorkAreaJPanel;
 
 /**
  *
@@ -71,8 +75,9 @@ public class HealthConsultantPharmaJPanel extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         quantityJTxt = new javax.swing.JTextField();
         reqPharma = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
-        jLabel1.setText("Medicine Name:");
+        jLabel1.setText("Medicine:");
 
         medicineJTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,18 +85,21 @@ public class HealthConsultantPharmaJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel2.setText("Quantity:");
+        jLabel2.setText("Quantity: ");
 
-        quantityJTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                quantityJTxtActionPerformed(evt);
-            }
-        });
+        quantityJTxt.setText("jTextField2");
 
         reqPharma.setText("Place order to pharma");
         reqPharma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 reqPharmaActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("<--Back to Doc Dashboard");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -105,15 +113,17 @@ public class HealthConsultantPharmaJPanel extends javax.swing.JPanel {
                         .addGap(74, 74, 74)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel2)
-                            .addComponent(jLabel1))
-                        .addGap(54, 54, 54)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(medicineJTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
-                            .addComponent(quantityJTxt)))
+                            .addComponent(jLabel1)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(122, 122, 122)
-                        .addComponent(reqPharma)))
-                .addContainerGap(82, Short.MAX_VALUE))
+                        .addGap(49, 49, 49)
+                        .addComponent(jButton1)))
+                .addGap(53, 53, 53)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(reqPharma)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(quantityJTxt)
+                        .addComponent(medicineJTxt)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -126,9 +136,11 @@ public class HealthConsultantPharmaJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(quantityJTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(83, 83, 83)
-                .addComponent(reqPharma)
-                .addContainerGap(95, Short.MAX_VALUE))
+                .addGap(48, 48, 48)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(reqPharma)
+                    .addComponent(jButton1))
+                .addContainerGap(130, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -143,17 +155,18 @@ public class HealthConsultantPharmaJPanel extends javax.swing.JPanel {
         phar.setMedicationName(medicineJTxt.getText().trim());
         phar.setQuantity(Integer.parseInt(quantityJTxt.getText().trim())); // added username and HeartBeat 
         phar.setSender(userAccount);
-        phar.setStatus("Requested");
+        phar.setStatus("Medicine Requested!!");
         
         //get Doctor Org 
         Organization org = null;
         
         for (Network network : system.getNetworkList()) {
             for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
-                if (enterprise instanceof ConsultationEnterprise) {
+                if (enterprise instanceof EcommerceEnterprise) {
                     for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
                         if (organization instanceof PharmaOrganization) {  // change to pharma organisation .. 
                             org = organization;
+                            System.out.println("healtc "+org.getName());
                             break;
                         }
                     }
@@ -162,19 +175,21 @@ public class HealthConsultantPharmaJPanel extends javax.swing.JPanel {
             }
         }
         
-        System.out.println("Organisation is "+org.getName()); // null pointer exception
+        System.out.println("Organisation is "+org.getName());
 
         if (org!= null) {
             org.getWorkQueue().getWorkRequestList().add(phar);
-            userAccount.getWorkQueue().getWorkRequestList().add(phar); // add workqueue to org 
+           // userAccount.getWorkQueue().getWorkRequestList().add(phar); // add workqueue to org 
 
             JOptionPane.showMessageDialog(null, "your prescription has beenr requested to pharma", "Information", JOptionPane.INFORMATION_MESSAGE);
         }
         System.out.println(org.getWorkQueue().getWorkRequestList().size());
-        db.storeSystem(system);
-        
-        
-        
+//        db.storeSystem(system);
+
+        for(WorkRequest w: org.getWorkQueue().getWorkRequestList()){
+            PharmacyWorkRequest pw = (PharmacyWorkRequest)w;
+            System.out.println("phar req inside"+pw.getMedicationName());
+        }     
         
     }//GEN-LAST:event_reqPharmaActionPerformed
 
@@ -182,12 +197,21 @@ public class HealthConsultantPharmaJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_medicineJTxtActionPerformed
 
-    private void quantityJTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quantityJTxtActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_quantityJTxtActionPerformed
+           userProcessContainer.remove(this);
+        Component[] componentArray = userProcessContainer.getComponents();
+        Component component = componentArray[componentArray.length - 1];
+        HealthConsultantJPanel dw = (HealthConsultantJPanel) component;
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+        
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField medicineJTxt;
