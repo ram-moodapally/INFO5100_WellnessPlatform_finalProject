@@ -5,6 +5,7 @@
 package Business.Organization;
 
 import Business.Employee.EmployeeDirectory;
+import Business.Enterprise.ManufacturingEnterprise;
 import Business.Role.Role;
 import Business.UserAccount.UserAccountDirectory;
 import Business.WorkQueue.WorkQueue;
@@ -12,7 +13,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author raunak
+ * @author shreyasprasad
  */
 public abstract class Organization {
 
@@ -24,7 +25,7 @@ public abstract class Organization {
     private static int counter=0;
     
     public enum Type{
-        Admin("Admin Organization"), WellnessPlatform("WellnessPlatform"), 
+        Admin("Admin Organization"),  WellnessPlatform("WellnessPlatform"), 
         HealthConsultation("Health Consultation Organisation"),NutritionConsultation("Nutrition Consultation Organisation"),FitnessConsultation("Fitness Consultation Organisation"), Manufacturing("Manufacturing Organisation"), Pharma("Pharma Organisation"), 
         Restaurant("Restaurant Organisation");
         

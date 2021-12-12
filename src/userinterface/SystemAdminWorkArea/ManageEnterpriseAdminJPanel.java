@@ -101,7 +101,6 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         passwordJPasswordField = new javax.swing.JPasswordField();
         backJButton = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(52, 148, 172));
         setForeground(new java.awt.Color(0, 0, 102));
@@ -192,7 +191,6 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
 
         backJButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 20)); // NOI18N
         backJButton.setForeground(new java.awt.Color(0, 0, 102));
-        backJButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\vgout\\AED_ASSIGNMENT\\AED_ASSIGNMENT_LAB\\biogen_finalproject\\BioGen_FinalProject\\src\\Image\\backbtn")); // NOI18N
         backJButton.setText(" Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -205,10 +203,6 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         jLabel6.setForeground(new java.awt.Color(0, 0, 102));
         jLabel6.setText("Enterprise Admin");
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 440, 52));
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Enterpriseadmin.jpg"))); // NOI18N
-        jLabel7.setText("jLabel7");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 0, 220, 170));
     }// </editor-fold>//GEN-END:initComponents
 
     private void networkJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_networkJComboBoxActionPerformed
@@ -280,7 +274,6 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField nameJTextField;
     private javax.swing.JComboBox networkJComboBox;

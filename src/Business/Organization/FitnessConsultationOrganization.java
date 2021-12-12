@@ -5,6 +5,7 @@
 package Business.Organization;
 
 import Business.Role.FitnessConsultantRole;
+import Business.Role.HealthConsultantRole;
 import Business.Role.Role;
 import java.util.ArrayList;
 

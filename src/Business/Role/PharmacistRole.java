@@ -7,12 +7,10 @@ package Business.Role;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
-
 import Business.Organization.Organization;
 import Business.Organization.PharmaOrganization;
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
-
 import userinterface.Pharmacist.PharmacistJPanel;
 
 /**

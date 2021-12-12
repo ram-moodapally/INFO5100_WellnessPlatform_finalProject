@@ -584,7 +584,138 @@ Logged in User RoleBusiness.Role.DoctorRole
 inside doctor role
 going back to Doctors work area
 Entering Main JFrame	userinterface.MainJFrame
+Logged in User RoleBusiness.Role.SystemAdminRole
+user creating networkuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+user creating enterpirseuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
 Entering Main JFrame	userinterface.MainJFrame
 Entering Main JFrame	userinterface.MainJFrame
 Entering Main JFrame	userinterface.MainJFrame
 Entering Main JFrame	userinterface.MainJFrame
+Logged in User RoleBusiness.Role.SystemAdminRole
+user creating networkuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+user creating enterpirseuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+name of the Enterpise is: 	usa_mname of Network in which the enterprise is: 	usa	userinterface.SystemAdminWorkArea.ManageEnterpriseJPanel
+user adding enterpirse adminsuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+system admin creating enterprise admin	userinterface.SystemAdminWorkArea.ManageEnterpriseAdminJPanel
+name of the USER is: 	manname of the enterprise is: 	manname of network is	usa	userinterface.SystemAdminWorkArea.ManageEnterpriseAdminJPanel
+Logged in User RoleBusiness.Role.AdminRole
+Enterprise admin creating Organization 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin adding Employee 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin adding following employee 	manuin following Organization 	Manufacturing Organisation	userinterface.AdministrativeRole.ManageEmployeeJpanel
+Enterprise admin adding users 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin creating user with name 	manuRoleBusiness.Role.ManufacturerRoleIn OrganizationManufacturing Organisation	userinterface.AdministrativeRole.ManageUserAccountJpanel
+Current Enterprise	usa_m
+Current Organization	Manufacturing Organisation
+Current Network	usa
+Logged in User RoleBusiness.Role.ManufacturerRole
+Entering Main JFrame	userinterface.MainJFrame
+Entering Main JFrame	userinterface.MainJFrame
+Logged in User RoleBusiness.Role.SystemAdminRole
+user creating networkuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+user creating enterpirseuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+Entering Main JFrame	userinterface.MainJFrame
+Entering Main JFrame	userinterface.MainJFrame
+Entering Main JFrame	userinterface.MainJFrame
+Entering Main JFrame	userinterface.MainJFrame
+Entering Main JFrame	userinterface.MainJFrame
+Entering Main JFrame	userinterface.MainJFrame
+Entering Main JFrame	userinterface.MainJFrame
+Logged in User RoleBusiness.Role.SystemAdminRole
+user creating networkuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+Sysadmin Creating Networkuserinterface.SystemAdminWorkArea.ManageNetworkJPanel
+Name of network Created:	usa
+user creating enterpirseuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+Entering Main JFrame	userinterface.MainJFrame
+Entering Main JFrame	userinterface.MainJFrame
+Logged in User RoleBusiness.Role.SystemAdminRole
+user creating networkuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+Entering Main JFrame	userinterface.MainJFrame
+Entering Main JFrame	userinterface.MainJFrame
+Entering Main JFrame	userinterface.MainJFrame
+Entering Main JFrame	userinterface.MainJFrame
+Logged in User RoleBusiness.Role.SystemAdminRole
+user creating networkuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+Sysadmin Creating Networkuserinterface.SystemAdminWorkArea.ManageNetworkJPanel
+Name of network Created:	usa
+user creating enterpirseuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+name of the Enterpise is: 	consname of Network in which the enterprise is: 	usa	userinterface.SystemAdminWorkArea.ManageEnterpriseJPanel
+user adding enterpirse adminsuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+system admin creating enterprise admin	userinterface.SystemAdminWorkArea.ManageEnterpriseAdminJPanel
+name of the USER is: 	consname of the enterprise is: 	consname of network is	usa	userinterface.SystemAdminWorkArea.ManageEnterpriseAdminJPanel
+Entering Main JFrame	userinterface.MainJFrame
+Logged in User RoleBusiness.Role.SystemAdminRole
+user creating networkuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+user creating enterpirseuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+user adding enterpirse adminsuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+Logged in User RoleBusiness.Role.AdminRole
+Enterprise admin creating Organization 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin adding Employee 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin adding following employee 	hcomin following Organization 	Health Consultation Organisation	userinterface.AdministrativeRole.ManageEmployeeJpanel
+Enterprise admin adding users 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin creating user with name 	hconRoleBusiness.Role.HealthConsultantRoleIn OrganizationHealth Consultation Organisation	userinterface.AdministrativeRole.ManageUserAccountJpanel
+Current Enterprise	cons
+Current Organization	Health Consultation Organisation
+Current Network	usa
+Logged in User RoleBusiness.Role.HealthConsultantRole
+Current Enterprise	cons
+Current Organization	Health Consultation Organisation
+Current Network	usa
+Logged in User RoleBusiness.Role.HealthConsultantRole
+Logged in User RoleBusiness.Role.AdminRole
+Enterprise admin adding users 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin creating Organization 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin adding Employee 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Logged in User RoleBusiness.Role.SystemAdminRole
+user creating networkuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+user creating enterpirseuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+name of the Enterpise is: 	ecomname of Network in which the enterprise is: 	usa	userinterface.SystemAdminWorkArea.ManageEnterpriseJPanel
+user adding enterpirse adminsuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+system admin creating enterprise admin	userinterface.SystemAdminWorkArea.ManageEnterpriseAdminJPanel
+name of the USER is: 	ecomname of the enterprise is: 	ecomname of network is	usa	userinterface.SystemAdminWorkArea.ManageEnterpriseAdminJPanel
+Logged in User RoleBusiness.Role.AdminRole
+Enterprise admin creating Organization 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin adding Employee 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin adding following employee 	resin following Organization 	Restaurant Organisation	userinterface.AdministrativeRole.ManageEmployeeJpanel
+Enterprise admin adding users 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin creating user with name 	resRoleBusiness.Role.UserRoleIn OrganizationRestaurant Organisation	userinterface.AdministrativeRole.ManageUserAccountJpanel
+Current Enterprise	ecom
+Current Organization	Restaurant Organisation
+Current Network	usa
+Logged in User RoleBusiness.Role.UserRole
+Current Enterprise	ecom
+Current Organization	Restaurant Organisation
+Current Network	usa
+Logged in User RoleBusiness.Role.UserRole
+Current Enterprise	ecom
+Current Organization	Restaurant Organisation
+Current Network	usa
+Logged in User RoleBusiness.Role.UserRole
+Logged in User RoleBusiness.Role.SystemAdminRole
+user creating enterpirseuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+name of the Enterpise is: 	wellname of Network in which the enterprise is: 	usa	userinterface.SystemAdminWorkArea.ManageEnterpriseJPanel
+user adding enterpirse adminsuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+system admin creating enterprise admin	userinterface.SystemAdminWorkArea.ManageEnterpriseAdminJPanel
+name of the USER is: 	username of the enterprise is: 	username of network is	usa	userinterface.SystemAdminWorkArea.ManageEnterpriseAdminJPanel
+user adding enterpirse adminsuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+Logged in User RoleBusiness.Role.AdminRole
+Enterprise admin creating Organization 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin adding Employee 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin adding following employee 	user1in following Organization 	WellnessPlatform	userinterface.AdministrativeRole.ManageEmployeeJpanel
+Enterprise admin adding users 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin creating user with name 	user1RoleBusiness.Role.UserRoleIn OrganizationWellnessPlatform	userinterface.AdministrativeRole.ManageUserAccountJpanel
+Current Enterprise	well
+Current Organization	WellnessPlatform
+Current Network	usa
+Logged in User RoleBusiness.Role.UserRole
+Entering Main JFrame	userinterface.MainJFrame
+Invalid credentials for user
+Logged in User RoleBusiness.Role.SystemAdminRole
+Current Enterprise	well
+Current Organization	WellnessPlatform
+Current Network	usa
+Logged in User RoleBusiness.Role.UserRole
+inside Restaurant role
+Current Enterprise	well
+Current Organization	WellnessPlatform
+Current Network	usa
+Logged in User RoleBusiness.Role.UserRole
