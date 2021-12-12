@@ -52,6 +52,9 @@ public class OrganizationDirectory {
           else if (type.getValue().equals(Type.Restaurant.getValue())){
             organization=new RestaurantOrganization();
             organizationList.add(organization);
+        }  else if (type.getValue().equals(Type.Supplement.getValue())){
+            organization=new SupplementOrganization();
+            organizationList.add(organization);
         }
         return organization;
     }

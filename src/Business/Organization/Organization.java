@@ -27,7 +27,7 @@ public abstract class Organization {
     public enum Type{
         Admin("Admin Organization"),  WellnessPlatform("WellnessPlatform"), 
         HealthConsultation("Health Consultation Organisation"),NutritionConsultation("Nutrition Consultation Organisation"),FitnessConsultation("Fitness Consultation Organisation"), Manufacturing("Manufacturing Organisation"), Pharma("Pharma Organisation"), 
-        Restaurant("Restaurant Organisation");
+        Restaurant("Restaurant Organisation"), Supplement("Supplement Organisation");
         
                 
         private String value;

@@ -1103,3 +1103,93 @@ Current Enterprise	Mans
 Current Organization	Manufacturing Organisation
 Current Network	USA
 Logged in User RoleBusiness.Role.ManufacturerRole
+Entering Main JFrame	userinterface.MainJFrame
+Logged in User RoleBusiness.Role.SystemAdminRole
+user creating networkuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+user adding enterpirse adminsuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+Current Enterprise	Ecoms
+Current Organization	Pharma Organisation
+Current Network	USA
+Logged in User RoleBusiness.Role.PharmacistRole
+Current Enterprise	Mans
+Current Organization	Manufacturing Organisation
+Current Network	USA
+Logged in User RoleBusiness.Role.ManufacturerRole
+Entering Main JFrame	userinterface.MainJFrame
+Logged in User RoleBusiness.Role.SystemAdminRole
+user creating networkuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+Sysadmin Creating Networkuserinterface.SystemAdminWorkArea.ManageNetworkJPanel
+Name of network Created:	usa
+user creating enterpirseuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+name of the Enterpise is: 	ecomname of Network in which the enterprise is: 	usa	userinterface.SystemAdminWorkArea.ManageEnterpriseJPanel
+user adding enterpirse adminsuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+system admin creating enterprise admin	userinterface.SystemAdminWorkArea.ManageEnterpriseAdminJPanel
+name of the USER is: 	ecomname of the enterprise is: 	ecomname of network is	usa	userinterface.SystemAdminWorkArea.ManageEnterpriseAdminJPanel
+Logged in User RoleBusiness.Role.AdminRole
+Enterprise admin creating Organization 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Logged in User RoleBusiness.Role.SystemAdminRole
+user adding enterpirse adminsuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+user creating enterpirseuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+name of the Enterpise is: 	ecommname of Network in which the enterprise is: 	usa	userinterface.SystemAdminWorkArea.ManageEnterpriseJPanel
+user adding enterpirse adminsuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+system admin creating enterprise admin	userinterface.SystemAdminWorkArea.ManageEnterpriseAdminJPanel
+name of the USER is: 	ecommname of the enterprise is: 	ecommname of network is	usa	userinterface.SystemAdminWorkArea.ManageEnterpriseAdminJPanel
+Logged in User RoleBusiness.Role.AdminRole
+Enterprise admin creating Organization 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin creating Organization 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Entering Main JFrame	userinterface.MainJFrame
+Logged in User RoleBusiness.Role.SystemAdminRole
+user creating networkuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+Sysadmin Creating Networkuserinterface.SystemAdminWorkArea.ManageNetworkJPanel
+Name of network Created:	usa
+user creating enterpirseuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+name of the Enterpise is: 	ecomname of Network in which the enterprise is: 	usa	userinterface.SystemAdminWorkArea.ManageEnterpriseJPanel
+user adding enterpirse adminsuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+system admin creating enterprise admin	userinterface.SystemAdminWorkArea.ManageEnterpriseAdminJPanel
+name of the USER is: 	ecomname of the enterprise is: 	ecomname of network is	usa	userinterface.SystemAdminWorkArea.ManageEnterpriseAdminJPanel
+Logged in User RoleBusiness.Role.AdminRole
+Enterprise admin creating Organization 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin adding Employee 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin adding following employee 	supin following Organization 	Supplement Organisation	userinterface.AdministrativeRole.ManageEmployeeJpanel
+Enterprise admin adding users 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin creating user with name 	supRoleBusiness.Role.SupplementManagerRoleIn OrganizationSupplement Organisation	userinterface.AdministrativeRole.ManageUserAccountJpanel
+Current Enterprise	ecom
+Current Organization	Supplement Organisation
+Current Network	usa
+Logged in User RoleBusiness.Role.SupplementManagerRole
+Current Enterprise	ecom
+Current Organization	Supplement Organisation
+Current Network	usa
+Logged in User RoleBusiness.Role.SupplementManagerRole
+Current Enterprise	ecom
+Current Organization	Supplement Organisation
+Current Network	usa
+Logged in User RoleBusiness.Role.SupplementManagerRole
+Current Enterprise	ecom
+Current Organization	Supplement Organisation
+Current Network	usa
+Logged in User RoleBusiness.Role.SupplementManagerRole
+Current Enterprise	ecom
+Current Organization	Supplement Organisation
+Current Network	usa
+Logged in User RoleBusiness.Role.SupplementManagerRole
+Current Enterprise	ecom
+Current Organization	Supplement Organisation
+Current Network	usa
+Logged in User RoleBusiness.Role.SupplementManagerRole
+Current Enterprise	ecom
+Current Organization	Supplement Organisation
+Current Network	usa
+Logged in User RoleBusiness.Role.SupplementManagerRole
+Current Enterprise	ecom
+Current Organization	Supplement Organisation
+Current Network	usa
+Logged in User RoleBusiness.Role.SupplementManagerRole
+Current Enterprise	ecom
+Current Organization	Supplement Organisation
+Current Network	usa
+Logged in User RoleBusiness.Role.SupplementManagerRole
+Current Enterprise	ecom
+Current Organization	Supplement Organisation
+Current Network	usa
+Logged in User RoleBusiness.Role.SupplementManagerRole

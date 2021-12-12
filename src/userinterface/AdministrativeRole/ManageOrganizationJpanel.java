@@ -63,6 +63,7 @@ public class ManageOrganizationJpanel extends javax.swing.JPanel {
                 {
                   organizationComboBox.addItem(Organization.Type.Restaurant);
                   organizationComboBox.addItem(Organization.Type.Pharma);
+                  organizationComboBox.addItem(Organization.Type.Supplement);
                   System.out.println("Inside Ecommerce");
                      break;  
                 }
