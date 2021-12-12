@@ -26,8 +26,7 @@ public abstract class Role {
         NutritionConsultant("Nutrition Consultant"),
         Manufacturer("Manufacturer"),
         Pharmacist("Pharmacist"),
-        RestaurantManager("RestaurantManager"),
-        SysUser("SysUser");
+        RestaurantManager("RestaurantManager");
         
         private String value;
         private RoleType(String value){

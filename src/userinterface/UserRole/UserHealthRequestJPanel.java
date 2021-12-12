@@ -23,7 +23,15 @@ public class UserHealthRequestJPanel extends javax.swing.JPanel {
      * Creates new form UserHealthRequestJPanel
      */
     public UserHealthRequestJPanel(JPanel userProcessContainer,UserAccount userAccount,Enterprise enterprise,WellnessPlatformOrganization organization,EcoSystem system,Network network) {
+        
+        
+        
+        
+        
         initComponents();
+        
+        
+     
     }
 
     /**

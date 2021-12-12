@@ -6,12 +6,10 @@
 package userinterface.AdministrativeRole;
 
 
-
 import Business.Enterprise.ConsultationEnterprise;
 
 import Business.Enterprise.EcommerceEnterprise;
 import Business.Enterprise.Enterprise;
-
 import Business.Enterprise.ManufacturingEnterprise;
 
 import Business.Enterprise.WellnessPlatformEnterprise;
@@ -25,7 +23,7 @@ import org.apache.log4j.Logger;
 
 /**
  *
- * @author shreyasprasad
+ * @author vgout
  */
 public class ManageOrganizationJpanel extends javax.swing.JPanel {
 
@@ -43,9 +41,9 @@ public class ManageOrganizationJpanel extends javax.swing.JPanel {
         this.userProcessContainer = userProcessContainer;
         this.enterprise=enterprise;
         populateTable();
-        System.out.println("Populated Manage Organisation table");
+        System.out.println("pupulated Manage Org table");
         populateComboBox();
-        System.out.println("Populated Manage Organisation Combobox");
+        System.out.println("pupulated Manage Org combox");
         
     }
     private void populateComboBox(){
@@ -55,7 +53,7 @@ public class ManageOrganizationJpanel extends javax.swing.JPanel {
             if (!type.getValue().equals(Organization.Type.Admin.getValue()))
             {
                 
-                
+                System.out.println("Inside 1st if");
                 if(enterprise instanceof WellnessPlatformEnterprise)
                 {
                   organizationComboBox.addItem(Organization.Type.WellnessPlatform);
@@ -65,7 +63,7 @@ public class ManageOrganizationJpanel extends javax.swing.JPanel {
                 {
                   organizationComboBox.addItem(Organization.Type.Restaurant);
                   organizationComboBox.addItem(Organization.Type.Pharma);
-                  
+                  System.out.println("Inside Ecommerce");
                      break;  
                 }
                 else if(enterprise instanceof ManufacturingEnterprise)
@@ -201,7 +199,7 @@ public class ManageOrganizationJpanel extends javax.swing.JPanel {
 
         Type type = (Type) organizationComboBox.getSelectedItem();
         organizationDir.createOrganization(type);
-        System.out.println("Enterprise admin adding an organization" +type);
+        System.out.println("Enterprise admin adding the following Organization" +type);
         populateTable();
         
     }//GEN-LAST:event_addBtnActionPerformed

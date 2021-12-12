@@ -4,7 +4,6 @@
  */
 package userinterface.UserRole;
 
-
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
@@ -25,8 +24,6 @@ public class UserWorkAreaJPanel extends javax.swing.JPanel {
     private WellnessPlatformOrganization organization;
     private Enterprise enterprise;
     private UserAccount userAccount;
-    
-    
     private  WellnessPlatformOrganization wellnessPlatformOrganization;
     private Network network;
     private EcoSystem system;
@@ -64,14 +61,12 @@ public class UserWorkAreaJPanel extends javax.swing.JPanel {
         healthConsultationBtn = new javax.swing.JButton();
         wellnessDataBtn = new javax.swing.JButton();
         doctorLbl = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         nutritionConsultationBtn = new javax.swing.JButton();
         fitnessConsultationBtn = new javax.swing.JButton();
         healthConsultationBtn1 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(153, 153, 255));
         setPreferredSize(new java.awt.Dimension(2000, 1200));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         healthConsultationBtn.setBackground(new java.awt.Color(255, 255, 255));
         healthConsultationBtn.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 24)); // NOI18N
@@ -82,7 +77,6 @@ public class UserWorkAreaJPanel extends javax.swing.JPanel {
                 healthConsultationBtnActionPerformed(evt);
             }
         });
-        add(healthConsultationBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 600, 497, 83));
 
         wellnessDataBtn.setBackground(new java.awt.Color(255, 255, 255));
         wellnessDataBtn.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 24)); // NOI18N
@@ -93,18 +87,12 @@ public class UserWorkAreaJPanel extends javax.swing.JPanel {
                 wellnessDataBtnActionPerformed(evt);
             }
         });
-        add(wellnessDataBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 480, 497, 100));
 
         doctorLbl.setBackground(new java.awt.Color(0, 204, 204));
         doctorLbl.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 48)); // NOI18N
         doctorLbl.setForeground(new java.awt.Color(0, 0, 102));
         doctorLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        doctorLbl.setText("USER WORK AREA");
-        add(doctorLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(248, 49, -1, 67));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Doctor.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 110, 550, 550));
+        doctorLbl.setText("Welcome User!");
 
         nutritionConsultationBtn.setBackground(new java.awt.Color(255, 255, 255));
         nutritionConsultationBtn.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 24)); // NOI18N
@@ -115,7 +103,6 @@ public class UserWorkAreaJPanel extends javax.swing.JPanel {
                 nutritionConsultationBtnActionPerformed(evt);
             }
         });
-        add(nutritionConsultationBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, 497, 100));
 
         fitnessConsultationBtn.setBackground(new java.awt.Color(255, 255, 255));
         fitnessConsultationBtn.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 24)); // NOI18N
@@ -126,7 +113,6 @@ public class UserWorkAreaJPanel extends javax.swing.JPanel {
                 fitnessConsultationBtnActionPerformed(evt);
             }
         });
-        add(fitnessConsultationBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 497, 100));
 
         healthConsultationBtn1.setBackground(new java.awt.Color(255, 255, 255));
         healthConsultationBtn1.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 24)); // NOI18N
@@ -137,7 +123,39 @@ public class UserWorkAreaJPanel extends javax.swing.JPanel {
                 healthConsultationBtn1ActionPerformed(evt);
             }
         });
-        add(healthConsultationBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 497, 83));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(183, 183, 183)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(doctorLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(healthConsultationBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(healthConsultationBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nutritionConsultationBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fitnessConsultationBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(wellnessDataBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(232, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(125, 125, 125)
+                .addComponent(doctorLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(healthConsultationBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nutritionConsultationBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(fitnessConsultationBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(wellnessDataBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(healthConsultationBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(181, Short.MAX_VALUE))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void healthConsultationBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_healthConsultationBtnActionPerformed
@@ -183,7 +201,6 @@ public class UserWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton fitnessConsultationBtn;
     private javax.swing.JButton healthConsultationBtn;
     private javax.swing.JButton healthConsultationBtn1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JButton nutritionConsultationBtn;
     private javax.swing.JButton wellnessDataBtn;
     // End of variables declaration//GEN-END:variables

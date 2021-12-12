@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author shreyasprasad
+ * @author raunak
  */
 public class OrganizationDirectory {
     
@@ -25,8 +25,6 @@ public class OrganizationDirectory {
     
     public Organization createOrganization(Type type){
         Organization organization = null;
-        
-
         if (type.getValue().equals(Type.WellnessPlatform.getValue())){
             organization=new WellnessPlatformOrganization();
             organizationList.add(organization);
