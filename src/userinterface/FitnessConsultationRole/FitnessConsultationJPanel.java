@@ -21,11 +21,11 @@ public class FitnessConsultationJPanel extends javax.swing.JPanel {
      * Creates new form UserJPanel
      */
     public FitnessConsultationJPanel(JPanel userProcessContainer, UserAccount userAccount, FitnessConsultationOrganization organization, Enterprise enterprise, Network network)  {
-        initComponents();
+      
     }
 
     public FitnessConsultationJPanel(JPanel userProcessContainer, UserAccount account, FitnessConsultationOrganization fitnessConsultationOrganization, Enterprise enterprise, EcoSystem business, Network network) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         initComponents();
     }
 
 

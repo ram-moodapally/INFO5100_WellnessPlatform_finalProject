@@ -15,9 +15,9 @@ public class PharmacyWorkRequest extends WorkRequest{
      private String medicationName;
     private int Quantity;
     private Date requestDate;
-    private String status;
-    private String supplierName;
-    private  String patientName;
+    //private String status;
+    private String supplierName; // why
+    private  String patientName; // why
     private String network;
 
     public String getMedicationName() {

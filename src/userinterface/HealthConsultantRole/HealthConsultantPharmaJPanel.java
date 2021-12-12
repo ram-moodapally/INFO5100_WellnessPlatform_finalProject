@@ -72,18 +72,21 @@ public class HealthConsultantPharmaJPanel extends javax.swing.JPanel {
         quantityJTxt = new javax.swing.JTextField();
         reqPharma = new javax.swing.JButton();
 
-        jLabel1.setText("jLabel1");
+        jLabel1.setText("Medicine Name:");
 
-        medicineJTxt.setText("jTextField1");
         medicineJTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 medicineJTxtActionPerformed(evt);
             }
         });
 
-        jLabel2.setText("jLabel2");
+        jLabel2.setText("Quantity:");
 
-        quantityJTxt.setText("jTextField2");
+        quantityJTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                quantityJTxtActionPerformed(evt);
+            }
+        });
 
         reqPharma.setText("Place order to pharma");
         reqPharma.addActionListener(new java.awt.event.ActionListener() {
@@ -103,14 +106,14 @@ public class HealthConsultantPharmaJPanel extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel2)
                             .addComponent(jLabel1))
-                        .addGap(63, 63, 63)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(medicineJTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(quantityJTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(54, 54, 54)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(medicineJTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
+                            .addComponent(quantityJTxt)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(122, 122, 122)
                         .addComponent(reqPharma)))
-                .addContainerGap(97, Short.MAX_VALUE))
+                .addContainerGap(82, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,7 +143,7 @@ public class HealthConsultantPharmaJPanel extends javax.swing.JPanel {
         phar.setMedicationName(medicineJTxt.getText().trim());
         phar.setQuantity(Integer.parseInt(quantityJTxt.getText().trim())); // added username and HeartBeat 
         phar.setSender(userAccount);
-        phar.setStatus("Medicine Requested!!");
+        phar.setStatus("Requested");
         
         //get Doctor Org 
         Organization org = null;
@@ -159,7 +162,7 @@ public class HealthConsultantPharmaJPanel extends javax.swing.JPanel {
             }
         }
         
-        System.out.println("Organisation is "+org.getName());
+        System.out.println("Organisation is "+org.getName()); // null pointer exception
 
         if (org!= null) {
             org.getWorkQueue().getWorkRequestList().add(phar);
@@ -178,6 +181,10 @@ public class HealthConsultantPharmaJPanel extends javax.swing.JPanel {
     private void medicineJTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medicineJTxtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_medicineJTxtActionPerformed
+
+    private void quantityJTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quantityJTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_quantityJTxtActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

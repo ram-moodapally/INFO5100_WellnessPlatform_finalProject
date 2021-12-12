@@ -9,7 +9,15 @@ import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.ManufacturingOrganization;
 import Business.UserAccount.UserAccount;
+import Business.WorkQueue.MfrWorkRequest;
+import Business.WorkQueue.PharmacyWorkRequest;
+import Business.WorkQueue.PharmacyWorkRequest;
+import Business.WorkQueue.WorkRequest;
+import java.awt.CardLayout;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
+
 
 /**
  *
@@ -20,18 +28,45 @@ public class ManufacturerJPanel extends javax.swing.JPanel {
     /**
      * Creates new form UserJPanel
      */
-    public ManufacturerJPanel(JPanel userProcessContainer, UserAccount userAccount,  ManufacturingOrganization organization, Enterprise enterprise, Network network)  {
-       
-    }
+    
+    private JPanel userProcessContainer;
+    private ManufacturingOrganization organization;
+    private Enterprise enterprise;
+    private UserAccount userAccount;
+    private EcoSystem business;
+    private EcoSystem ecosystem;
+    private Network network;
 
     public ManufacturerJPanel(JPanel userProcessContainer, UserAccount account, ManufacturingOrganization manufacturingOrganization, Enterprise enterprise, EcoSystem business, Network network) {
        initComponents();
+       
+       this.userProcessContainer = userProcessContainer;
+        this.userAccount = account;
+        this.organization = manufacturingOrganization;
+        this.enterprise = enterprise;
+        this.ecosystem = business;
+        this.network= network;
+        populateManufacturingTable();
+       
     }
+        
+    public void populateManufacturingTable(){
+        
+        DefaultTableModel model = (DefaultTableModel) tblMfrOrderRequest.getModel();
+        model.setRowCount(0);
+        
+        for(WorkRequest request : organization.getWorkQueue().getWorkRequestList()){
+            Object[] row = new Object[20];
+            MfrWorkRequest mfrRequest = (MfrWorkRequest) request;
 
-
-
-
-
+            row[0] = mfrRequest;
+            row[1] = mfrRequest.getMfrQuantity();
+            row[2] = mfrRequest.getStatus();
+            //row[3] = mfrRequest;
+            model.addRow(row);
+        }
+         
+       }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -42,19 +77,79 @@ public class ManufacturerJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblMfrOrderRequest = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
+        btnProcessOrder = new javax.swing.JButton();
+
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblMfrOrderRequest.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Medicine", "Quantity", "Status"
+            }
+        ));
+        jScrollPane1.setViewportView(tblMfrOrderRequest);
+
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, -1, 110));
+
+        jLabel1.setText("Manufacturer WorkArea");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, -1, -1));
+
+        btnProcessOrder.setText("Process");
+        btnProcessOrder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProcessOrderActionPerformed(evt);
+            }
+        });
+        add(btnProcessOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 270, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnProcessOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcessOrderActionPerformed
+        // TODO add your handling code here:
+
+        int selectedRow = tblMfrOrderRequest.getSelectedRow();
+
+        if (selectedRow < 0){
+            JOptionPane.showMessageDialog(this, "Please select a row to process this order");
+            return;
+        }
+        MfrWorkRequest manuRequest = (MfrWorkRequest) tblMfrOrderRequest.getValueAt(selectedRow, 3);
+
+        if(!manuRequest.getStatus().equals("Ordered")){
+            if(manuRequest.getStatus().equals("Processing")){
+
+                ProcessManuWorkRequest processWorkRequestJPanel = new ProcessManuWorkRequest(userProcessContainer, manuRequest);
+                userProcessContainer.add("processWorkRequestJPanel", processWorkRequestJPanel);
+                CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+                layout.next(userProcessContainer);
+
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "This order has been processed before");
+                return;
+            }
+        }
+
+        manuRequest.setStatus("Processing");
+
+        ProcessManuWorkRequest processWorkRequestJPanel = new ProcessManuWorkRequest(userProcessContainer, manuRequest);
+        userProcessContainer.add("processWorkRequestJPanel", processWorkRequestJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnProcessOrderActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnProcessOrder;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable tblMfrOrderRequest;
     // End of variables declaration//GEN-END:variables
 }
