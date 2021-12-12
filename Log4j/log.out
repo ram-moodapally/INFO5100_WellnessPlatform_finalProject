@@ -719,3 +719,100 @@ Current Enterprise	well
 Current Organization	WellnessPlatform
 Current Network	usa
 Logged in User RoleBusiness.Role.UserRole
+Entering Main JFrame	userinterface.MainJFrame
+Logged in User RoleBusiness.Role.SystemAdminRole
+Entering Main JFrame	userinterface.MainJFrame
+Logged in User RoleBusiness.Role.SystemAdminRole
+user creating networkuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+user creating enterpirseuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+user adding enterpirse adminsuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+system admin creating enterprise admin	userinterface.SystemAdminWorkArea.ManageEnterpriseAdminJPanel
+name of the USER is: 	user1name of the enterprise is: 	user1name of network is	usa	userinterface.SystemAdminWorkArea.ManageEnterpriseAdminJPanel
+Logged in User RoleBusiness.Role.AdminRole
+Enterprise admin creating Organization 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin adding Employee 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin adding following employee 	useruserin following Organization 	WellnessPlatform	userinterface.AdministrativeRole.ManageEmployeeJpanel
+Enterprise admin adding users 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin creating user with name 	useruserRoleBusiness.Role.UserRoleIn OrganizationWellnessPlatform	userinterface.AdministrativeRole.ManageUserAccountJpanel
+Current Enterprise	well
+Current Organization	WellnessPlatform
+Current Network	usa
+Logged in User RoleBusiness.Role.UserRole
+Current Enterprise	well
+Current Organization	WellnessPlatform
+Current Network	usa
+Logged in User RoleBusiness.Role.UserRole
+Current Enterprise	well
+Current Organization	WellnessPlatform
+Current Network	usa
+Logged in User RoleBusiness.Role.UserRole
+inside the health consultation request
+Current Enterprise	well
+Current Organization	WellnessPlatform
+Current Network	usa
+Logged in User RoleBusiness.Role.UserRole
+Entering Main JFrame	userinterface.MainJFrame
+Current Enterprise	well
+Current Organization	WellnessPlatform
+Current Network	usa
+Logged in User RoleBusiness.Role.UserRole
+Logged in User RoleBusiness.Role.SystemAdminRole
+user creating networkuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+user creating enterpirseuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+name of the Enterpise is: 	docname of Network in which the enterprise is: 	usa	userinterface.SystemAdminWorkArea.ManageEnterpriseJPanel
+user adding enterpirse adminsuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+system admin creating enterprise admin	userinterface.SystemAdminWorkArea.ManageEnterpriseAdminJPanel
+name of the USER is: 	docusername of the enterprise is: 	docusername of network is	usa	userinterface.SystemAdminWorkArea.ManageEnterpriseAdminJPanel
+Logged in User RoleBusiness.Role.AdminRole
+Enterprise admin creating Organization 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin adding Employee 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin adding following employee 	dcuserin following Organization 	Health Consultation Organisation	userinterface.AdministrativeRole.ManageEmployeeJpanel
+Enterprise admin adding users 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin creating user with name 	dcuserRoleBusiness.Role.HealthConsultantRoleIn OrganizationHealth Consultation Organisation	userinterface.AdministrativeRole.ManageUserAccountJpanel
+Current Enterprise	doc
+Current Organization	Health Consultation Organisation
+Current Network	usa
+Logged in User RoleBusiness.Role.HealthConsultantRole
+Entering Main JFrame	userinterface.MainJFrame
+Logged in User RoleBusiness.Role.AdminRole
+Enterprise admin adding users 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Current Enterprise	doc
+Current Organization	Health Consultation Organisation
+Current Network	usa
+Logged in User RoleBusiness.Role.HealthConsultantRole
+Logged in User RoleBusiness.Role.AdminRole
+Enterprise admin adding users 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Current Enterprise	well
+Current Organization	WellnessPlatform
+Current Network	usa
+Logged in User RoleBusiness.Role.UserRole
+Current Enterprise	doc
+Current Organization	Health Consultation Organisation
+Current Network	usa
+Logged in User RoleBusiness.Role.HealthConsultantRole
+Current Enterprise	doc
+Current Organization	Health Consultation Organisation
+Current Network	usa
+Logged in User RoleBusiness.Role.HealthConsultantRole
+Logged in User RoleBusiness.Role.SystemAdminRole
+user creating enterpirseuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+name of the Enterpise is: 	pharmaEPname of Network in which the enterprise is: 	usa	userinterface.SystemAdminWorkArea.ManageEnterpriseJPanel
+user adding enterpirse adminsuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+user creating networkuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+user creating enterpirseuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+user adding enterpirse adminsuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+user creating enterpirseuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+user adding enterpirse adminsuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+user creating enterpirseuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+user creating enterpirseuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+user adding enterpirse adminsuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+Logged in User RoleBusiness.Role.AdminRole
+Enterprise admin creating Organization 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin adding Employee 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin adding following employee 	pharin following Organization 	Pharma Organisation	userinterface.AdministrativeRole.ManageEmployeeJpanel
+Enterprise admin adding users 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin creating user with name 	pharRoleBusiness.Role.PharmacistRoleIn OrganizationPharma Organisation	userinterface.AdministrativeRole.ManageUserAccountJpanel
+Current Enterprise	ecom
+Current Organization	Pharma Organisation
+Current Network	usa
+Logged in User RoleBusiness.Role.PharmacistRole

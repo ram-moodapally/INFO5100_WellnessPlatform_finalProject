@@ -5,11 +5,27 @@
 package userinterface.HealthConsultantRole;
 
 import Business.EcoSystem;
+import Business.Enterprise.ConsultationEnterprise;
+import Business.Enterprise.Enterprise;
+import Business.Network.Network;
+import Business.Organization.WellnessPlatformOrganization;
+import Business.UserAccount.UserAccount;
+import javax.swing.JPanel;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.HealthConsultationOrganization;
+import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
+import Business.WorkQueue.PharmacyWorkRequest;
+import Business.WorkQueue.UserDoctorWorkRequest;
+import Business.WorkQueue.WorkRequest;
+import java.awt.CardLayout;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
+import org.apache.log4j.Logger;
+import userinterface.HealthConsultantRole.HealthConsultantJPanel;
 
 /**
  *
@@ -21,19 +37,68 @@ public class HealthConsultantJPanel extends javax.swing.JPanel {
     /**
      * Creates new form UserJPanel
      */
-    public HealthConsultantJPanel(JPanel userProcessContainer, UserAccount userAccount, HealthConsultationOrganization organization, Enterprise enterprise, Network network)  {
-        initComponents();
-
-    }
-
-    public HealthConsultantJPanel(JPanel userProcessContainer, UserAccount account, HealthConsultationOrganization healthConsultationOrganization, Enterprise enterprise, EcoSystem business, Network network) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-
-
+    
+    JPanel userProcessContainer;
+    private Enterprise enterprise;
+    private UserAccount userAccount;
+    private  WellnessPlatformOrganization wellnessPlatformOrganization;
+    private Network network;
+    private EcoSystem system;
+    
+    private Organization hcOrganisation;
     
 
+    public HealthConsultantJPanel(JPanel userProcessContainer, UserAccount account, HealthConsultationOrganization healthConsultationOrganization, Enterprise enterprise, EcoSystem system, Network network) {
+        
+        this.userProcessContainer = userProcessContainer;
+        this.userAccount = userAccount;
+        this.wellnessPlatformOrganization= wellnessPlatformOrganization;
+        this.enterprise = enterprise;
+        this.network = network;
+        this.system = system;
+        network();
+        initComponents();
+        System.out.println("inside the health consultant panel ");
+        
+        populateTable();
+    }
+    
+    public void network() {
+        network.getName();
+
+    }
+    
+    private void populateTable(){
+        DefaultTableModel model = (DefaultTableModel)hcTable.getModel();
+        
+        for (Network network : system.getNetworkList()) {
+            for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
+                if (enterprise instanceof ConsultationEnterprise) {
+                    for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
+                        if (organization instanceof HealthConsultationOrganization) {
+                            hcOrganisation = organization;
+                            break;
+                        }
+                    }
+                }
+
+            }
+        }
+      
+       model.setRowCount(0);
+        for (WorkRequest reqQueue : hcOrganisation.getWorkQueue().getWorkRequestList()){
+            UserDoctorWorkRequest hcWorkRequest = (UserDoctorWorkRequest)reqQueue;
+            Object[] row = new Object[7];
+            row[0]= hcWorkRequest;
+            row[1] = hcWorkRequest.getHeartBeat();
+            row[2] = hcWorkRequest.getUserName();
+            row[4] = hcWorkRequest;
+            model.addRow(row);
+        }
+    
+    }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -43,19 +108,92 @@ public class HealthConsultantJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        hcTable = new javax.swing.JTable();
+
+        jButton1.setText("Study Case");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Welcome to doctor work area");
+
+        hcTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(hcTable);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(74, 74, 74))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(154, 154, 154)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 699, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(59, 59, 59)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(155, 155, 155))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+        // select the work queue.
+        int selectedHCRequest = hcTable.getSelectedRow();
+        
+         if(selectedHCRequest >= 0){
+           
+           
+           UserDoctorWorkRequest HCPcrequest =(UserDoctorWorkRequest)hcTable.getValueAt(selectedHCRequest, 0);
+           HCPcrequest.setStatus("prescription");
+           
+           HealthConsultantPharmaJPanel processWorkRequestJPanel = new HealthConsultantPharmaJPanel(userProcessContainer, userAccount, wellnessPlatformOrganization, enterprise, system);
+            userProcessContainer.add("processWorkRequestJPanel", processWorkRequestJPanel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
+       }else{
+           JOptionPane.showMessageDialog(null, "Please Select any row");
+       }
+        
+        
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTable hcTable;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

@@ -163,7 +163,7 @@ public class UserWorkAreaJPanel extends javax.swing.JPanel {
 
          CardLayout layout = (CardLayout) userProcessContainer.getLayout();
           log.debug("inside doctor role");
-          userProcessContainer.add("UserHealthRequestJPanel", new userinterface.UserRole.UserHealthRequestJPanel(userProcessContainer,userAccount,enterprise,organization,system,network));
+          userProcessContainer.add("UserHealthConsultantRequestJPanel", new userinterface.UserRole.UserHealthConsultantRequestJPanel(userProcessContainer,userAccount,enterprise,organization,system,network));
        //  userProcessContainer.add("PrescriptionJPanel", new userinterface.DoctorRole.PrescriptionJPanel(userProcessContainer, userAccount, enterprise));
          layout.next(userProcessContainer);
 
@@ -181,6 +181,7 @@ public class UserWorkAreaJPanel extends javax.swing.JPanel {
 
     private void nutritionConsultationBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nutritionConsultationBtnActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_nutritionConsultationBtnActionPerformed
 
     private void fitnessConsultationBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fitnessConsultationBtnActionPerformed
@@ -189,10 +190,8 @@ public class UserWorkAreaJPanel extends javax.swing.JPanel {
 
     private void healthConsultationBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_healthConsultationBtn1ActionPerformed
         // TODO add your handling code here:
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-          log.debug("inside Restaurant role");
-          //userProcessContainer.add("OrderFood", new userinterface.UserRole.OrderFoodRequestJPanel(userProcessContainer,userAccount,enterprise,organization,system,network));
-       //  userProcessContainer.add("PrescriptionJPanel", new userinterface.DoctorRole.PrescriptionJPanel(userProcessContainer, userAccount, enterprise));
+       CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+         userProcessContainer.add("UserHealthConsultantRequestJPanel", new userinterface.UserRole.UserHealthConsultantRequestJPanel(userProcessContainer,userAccount,enterprise,organization,system,network));
          layout.next(userProcessContainer);
     }//GEN-LAST:event_healthConsultationBtn1ActionPerformed
 
