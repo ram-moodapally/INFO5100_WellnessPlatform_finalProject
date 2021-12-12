@@ -92,7 +92,7 @@ public class HealthConsultantJPanel extends javax.swing.JPanel {
             row[0]= hcWorkRequest;
             row[1] = hcWorkRequest.getHeartBeat();
             row[2] = hcWorkRequest.getUserName();
-            row[4] = hcWorkRequest;
+            row[3] = hcWorkRequest.getStatus();
             model.addRow(row);
         }
     
@@ -175,7 +175,7 @@ public class HealthConsultantJPanel extends javax.swing.JPanel {
            
            
            UserDoctorWorkRequest HCPcrequest =(UserDoctorWorkRequest)hcTable.getValueAt(selectedHCRequest, 0);
-           HCPcrequest.setStatus("prescription");
+           HCPcrequest.setStatus("Prescription");
            
            HealthConsultantPharmaJPanel processWorkRequestJPanel = new HealthConsultantPharmaJPanel(userProcessContainer, userAccount, wellnessPlatformOrganization, enterprise, system);
             userProcessContainer.add("processWorkRequestJPanel", processWorkRequestJPanel);
