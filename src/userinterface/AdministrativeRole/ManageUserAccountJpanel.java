@@ -66,10 +66,10 @@ public class ManageUserAccountJpanel extends javax.swing.JPanel {
         backBtn = new javax.swing.JButton();
         createUserbtn = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(52, 148, 172));
+        setBackground(new java.awt.Color(153, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        userTbl.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 20)); // NOI18N
+        userTbl.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
         userTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -96,76 +96,72 @@ public class ManageUserAccountJpanel extends javax.swing.JPanel {
         userTbl.setRowHeight(22);
         jScrollPane1.setViewportView(userTbl);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(667, 116, -1, 264));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, -1, 264));
 
-        manageuserLbl.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 48)); // NOI18N
-        manageuserLbl.setForeground(new java.awt.Color(0, 0, 102));
+        manageuserLbl.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
         manageuserLbl.setText("Manage User Account");
-        add(manageuserLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(642, 36, -1, -1));
+        add(manageuserLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Microsoft YaHei UI Light", 1, 24)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel5.setText("Organization:");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 410, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 430, -1, -1));
 
-        organizationComboBox.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 20)); // NOI18N
+        organizationComboBox.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         organizationComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         organizationComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 organizationComboBoxActionPerformed(evt);
             }
         });
-        add(organizationComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(909, 412, 210, -1));
+        add(organizationComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 430, 210, -1));
 
-        jLabel3.setFont(new java.awt.Font("Microsoft YaHei UI Light", 1, 24)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel3.setText("Employee:");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(729, 456, 162, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 470, 162, -1));
 
-        employeeComboBox.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 20)); // NOI18N
+        employeeComboBox.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         employeeComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(employeeComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(909, 462, 210, -1));
+        add(employeeComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 480, 210, -1));
 
-        jLabel4.setFont(new java.awt.Font("Microsoft YaHei UI Light", 1, 24)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel4.setText("Role:");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(729, 505, 72, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 520, 72, -1));
 
-        roleComboBox.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 20)); // NOI18N
+        roleComboBox.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         roleComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(roleComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(909, 511, 210, -1));
+        add(roleComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 530, 210, -1));
 
-        jLabel1.setFont(new java.awt.Font("Microsoft YaHei UI Light", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel1.setText("User Name:");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(729, 555, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 570, -1, -1));
 
-        nametxt.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 20)); // NOI18N
-        add(nametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(909, 560, 210, -1));
+        nametxt.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        add(nametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 570, 210, -1));
 
-        passwordTxt.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 20)); // NOI18N
-        add(passwordTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(909, 611, 210, -1));
+        passwordTxt.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        add(passwordTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 620, 210, -1));
 
-        jLabel2.setFont(new java.awt.Font("Microsoft YaHei UI Light", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel2.setText("Password:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(729, 605, 130, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 620, 130, -1));
 
-        backBtn.setFont(new java.awt.Font("Microsoft YaHei UI Light", 1, 18)); // NOI18N
-        backBtn.setForeground(new java.awt.Color(0, 0, 102));
-        backBtn.setIcon(new javax.swing.ImageIcon("C:\\Users\\vgout\\AED_ASSIGNMENT\\AED_ASSIGNMENT_LAB\\biogen_finalproject\\BioGen_FinalProject\\src\\Image\\backbtn")); // NOI18N
+        backBtn.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         backBtn.setText(" Back");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backBtnActionPerformed(evt);
             }
         });
-        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(729, 668, 112, -1));
+        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 810, 120, 60));
 
-        createUserbtn.setFont(new java.awt.Font("Microsoft YaHei UI Light", 1, 18)); // NOI18N
-        createUserbtn.setForeground(new java.awt.Color(0, 0, 102));
+        createUserbtn.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         createUserbtn.setText("Create User Account");
         createUserbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 createUserbtnActionPerformed(evt);
             }
         });
-        add(createUserbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(897, 669, 233, 31));
+        add(createUserbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 690, 300, 70));
     }// </editor-fold>//GEN-END:initComponents
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed

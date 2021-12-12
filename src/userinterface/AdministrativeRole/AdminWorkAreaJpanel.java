@@ -53,50 +53,47 @@ public class AdminWorkAreaJpanel extends javax.swing.JPanel {
         manageOrganizationbtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(52, 148, 172));
+        setBackground(new java.awt.Color(153, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 48)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel3.setText("Ecom  Work Area");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 130, -1, -1));
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jLabel3.setText("Welcome Admin");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, -1, -1));
 
-        valuelbl.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        valuelbl.setForeground(new java.awt.Color(0, 0, 102));
+        valuelbl.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         valuelbl.setText("<value>");
-        add(valuelbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 210, 130, 30));
+        add(valuelbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 220, 130, 30));
 
-        manageEmployeebtn.setFont(new java.awt.Font("Microsoft YaHei UI Light", 1, 24)); // NOI18N
+        manageEmployeebtn.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         manageEmployeebtn.setText("Manage Employee");
         manageEmployeebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 manageEmployeebtnActionPerformed(evt);
             }
         });
-        add(manageEmployeebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 460, 320, 70));
+        add(manageEmployeebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 400, 320, 70));
 
-        enterpriseLabel1.setFont(new java.awt.Font("Microsoft YaHei UI Light", 1, 24)); // NOI18N
-        enterpriseLabel1.setForeground(new java.awt.Color(0, 0, 102));
+        enterpriseLabel1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         enterpriseLabel1.setText("Enterprise :");
-        add(enterpriseLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 210, 150, 30));
+        add(enterpriseLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 220, 150, 30));
 
-        userbtn.setFont(new java.awt.Font("Microsoft YaHei UI Light", 1, 24)); // NOI18N
+        userbtn.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         userbtn.setText("Manage User");
         userbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userbtnActionPerformed(evt);
             }
         });
-        add(userbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 610, 320, 70));
+        add(userbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 510, 320, 70));
 
-        manageOrganizationbtn.setFont(new java.awt.Font("Microsoft YaHei UI Light", 1, 24)); // NOI18N
+        manageOrganizationbtn.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         manageOrganizationbtn.setText("Manage Organization");
         manageOrganizationbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 manageOrganizationbtnActionPerformed(evt);
             }
         });
-        add(manageOrganizationbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 300, 320, 70));
+        add(manageOrganizationbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 300, 320, 70));
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, -30, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 

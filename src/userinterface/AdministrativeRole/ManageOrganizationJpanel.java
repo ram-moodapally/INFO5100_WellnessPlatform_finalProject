@@ -116,15 +116,14 @@ public class ManageOrganizationJpanel extends javax.swing.JPanel {
         backbtn = new javax.swing.JButton();
         addBtn = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(52, 148, 172));
+        setBackground(new java.awt.Color(153, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        manageorglbl.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 48)); // NOI18N
-        manageorglbl.setForeground(new java.awt.Color(0, 0, 102));
+        manageorglbl.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
         manageorglbl.setText("Manage Organization");
-        add(manageorglbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(702, 68, -1, -1));
+        add(manageorglbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, -1, -1));
 
-        organizationtbl.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 20)); // NOI18N
+        organizationtbl.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
         organizationtbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -153,40 +152,38 @@ public class ManageOrganizationJpanel extends javax.swing.JPanel {
         organizationtbl.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(organizationtbl);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(702, 198, 516, 177));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 516, 177));
 
-        orglbl.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 24)); // NOI18N
+        orglbl.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         orglbl.setText("Organization Type: ");
-        add(orglbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(702, 444, -1, -1));
+        add(orglbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 450, -1, -1));
 
-        organizationComboBox.setFont(new java.awt.Font("Microsoft YaHei UI Light", 1, 20)); // NOI18N
+        organizationComboBox.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
         organizationComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         organizationComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 organizationComboBoxActionPerformed(evt);
             }
         });
-        add(organizationComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 450, 200, 32));
+        add(organizationComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 450, 200, 32));
 
-        backbtn.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 18)); // NOI18N
-        backbtn.setForeground(new java.awt.Color(0, 0, 102));
+        backbtn.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         backbtn.setText(" Back");
         backbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backbtnActionPerformed(evt);
             }
         });
-        add(backbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 540, -1, -1));
+        add(backbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 660, 120, 60));
 
-        addBtn.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 18)); // NOI18N
-        addBtn.setForeground(new java.awt.Color(0, 0, 102));
+        addBtn.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         addBtn.setText("Add Organization");
         addBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addBtnActionPerformed(evt);
             }
         });
-        add(addBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1033, 538, -1, -1));
+        add(addBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 520, 270, 60));
     }// </editor-fold>//GEN-END:initComponents
 
     private void backbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbtnActionPerformed
