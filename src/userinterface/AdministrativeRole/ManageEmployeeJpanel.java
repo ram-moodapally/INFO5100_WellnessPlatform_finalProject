@@ -137,7 +137,7 @@ public class ManageEmployeeJpanel extends javax.swing.JPanel {
                 backJButtonActionPerformed(evt);
             }
         });
-        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 820, 110, 50));
+        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 660, 110, 50));
 
         addJButton.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
         addJButton.setText("Create Employee");

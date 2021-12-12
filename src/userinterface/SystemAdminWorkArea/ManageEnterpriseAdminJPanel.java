@@ -186,7 +186,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
                 backJButtonActionPerformed(evt);
             }
         });
-        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 730, 110, 60));
+        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 730, 110, 60));
 
         jLabel6.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
         jLabel6.setText("Welcome Enterprise Admin!");
