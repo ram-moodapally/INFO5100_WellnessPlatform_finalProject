@@ -88,11 +88,10 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         submitJButton = new javax.swing.JButton();
         backJButton = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(52, 148, 172));
+        setBackground(new java.awt.Color(153, 204, 255));
 
-        enterpriseJTable.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 20)); // NOI18N
+        enterpriseJTable.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
         enterpriseJTable.setForeground(new java.awt.Color(0, 0, 102));
         enterpriseJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -113,27 +112,21 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         enterpriseJTable.setRowHeight(25);
         jScrollPane1.setViewportView(enterpriseJTable);
 
-        jLabel1.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel1.setText("Network");
 
-        networkJComboBox.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 24)); // NOI18N
-        networkJComboBox.setForeground(new java.awt.Color(0, 0, 102));
+        networkJComboBox.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         networkJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jLabel2.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel2.setText("Name");
+        jLabel2.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel2.setText("Enter Name");
 
-        nameJTextField.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 24)); // NOI18N
-        nameJTextField.setForeground(new java.awt.Color(0, 0, 102));
+        nameJTextField.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
 
-        jLabel3.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel3.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel3.setText("Enterprise Type");
 
-        enterpriseTypeJComboBox.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 24)); // NOI18N
-        enterpriseTypeJComboBox.setForeground(new java.awt.Color(0, 0, 102));
+        enterpriseTypeJComboBox.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         enterpriseTypeJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         enterpriseTypeJComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,8 +134,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
             }
         });
 
-        submitJButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 24)); // NOI18N
-        submitJButton.setForeground(new java.awt.Color(0, 0, 102));
+        submitJButton.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         submitJButton.setText("Submit");
         submitJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,8 +142,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
             }
         });
 
-        backJButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 24)); // NOI18N
-        backJButton.setForeground(new java.awt.Color(0, 0, 102));
+        backJButton.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         backJButton.setText(" Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,11 +150,9 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel6.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 48)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel6.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Manage Enterprise ");
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Enterprise.jpg"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -182,34 +171,26 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
                             .addComponent(networkJComboBox, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(enterpriseTypeJComboBox, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(nameJTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(132, 132, 132)
+                        .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(145, 145, 145)
+                        .addComponent(submitJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(141, 141, 141)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel4))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(90, 90, 90)
-                                .addComponent(backJButton)
-                                .addGap(236, 236, 236)
-                                .addComponent(submitJButton)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(190, 190, 190)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 620, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 620, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(210, 210, 210))
+                .addGap(340, 455, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 20, 20)))
+                .addGap(26, 26, 26)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
+                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(networkJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -221,11 +202,15 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(nameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(submitJButton)
-                    .addComponent(backJButton))
-                .addGap(17, 17, 17))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                        .addComponent(submitJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(250, 250, 250))))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -286,7 +271,6 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField nameJTextField;

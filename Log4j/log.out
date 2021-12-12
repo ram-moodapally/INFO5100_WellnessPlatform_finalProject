@@ -1209,3 +1209,13 @@ Enterprise admin adding Employee 	userinterface.AdministrativeRole.AdminWorkArea
 Enterprise admin adding users 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
 Enterprise admin adding Employee 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
 Enterprise admin creating Organization 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Entering Main JFrame	userinterface.MainJFrame
+Logged in User RoleBusiness.Role.SystemAdminRole
+user creating enterpirseuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+user creating networkuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+user creating enterpirseuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+user adding enterpirse adminsuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+Logged in User RoleBusiness.Role.AdminRole
+Enterprise admin creating Organization 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin adding Employee 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin adding users 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
