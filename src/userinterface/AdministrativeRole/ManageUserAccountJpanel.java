@@ -104,7 +104,7 @@ public class ManageUserAccountJpanel extends javax.swing.JPanel {
 
         jLabel5.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel5.setText("Organization:");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 430, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 430, 150, 30));
 
         organizationComboBox.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         organizationComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -113,37 +113,37 @@ public class ManageUserAccountJpanel extends javax.swing.JPanel {
                 organizationComboBoxActionPerformed(evt);
             }
         });
-        add(organizationComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 430, 210, -1));
+        add(organizationComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 430, 220, 30));
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel3.setText("Employee:");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 470, 162, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 470, 180, 30));
 
         employeeComboBox.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         employeeComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(employeeComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 480, 210, -1));
+        add(employeeComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 480, 220, 30));
 
         jLabel4.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel4.setText("Role:");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 520, 72, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 520, 90, 30));
 
         roleComboBox.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         roleComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(roleComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 530, 210, -1));
+        add(roleComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 530, 220, 30));
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel1.setText("User Name:");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 570, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 570, 140, 30));
 
         nametxt.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        add(nametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 570, 210, -1));
+        add(nametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 570, 220, 40));
 
         passwordTxt.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        add(passwordTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 620, 210, -1));
+        add(passwordTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 620, 220, 40));
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel2.setText("Password:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 620, 130, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 620, 140, 30));
 
         backBtn.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         backBtn.setText(" Back");
@@ -152,7 +152,7 @@ public class ManageUserAccountJpanel extends javax.swing.JPanel {
                 backBtnActionPerformed(evt);
             }
         });
-        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 810, 120, 60));
+        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 570, 120, 60));
 
         createUserbtn.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         createUserbtn.setText("Create User Account");
@@ -161,7 +161,7 @@ public class ManageUserAccountJpanel extends javax.swing.JPanel {
                 createUserbtnActionPerformed(evt);
             }
         });
-        add(createUserbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 690, 300, 70));
+        add(createUserbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 480, 310, 70));
     }// </editor-fold>//GEN-END:initComponents
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
