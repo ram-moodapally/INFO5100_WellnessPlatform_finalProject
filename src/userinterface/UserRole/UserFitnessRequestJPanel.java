@@ -5,6 +5,30 @@
  */
 package userinterface.UserRole;
 
+import Business.EcoSystem;
+import Business.Enterprise.Enterprise;
+import Business.Network.Network;
+import Business.Organization.WellnessPlatformOrganization;
+import Business.UserAccount.UserAccount;
+import javax.swing.JPanel;
+import Business.EcoSystem;
+import Business.Enterprise.Enterprise;
+import Business.Network.Network;
+import Business.Organization.FitnessConsultationOrganization;
+import Business.Organization.Organization;
+import Business.Organization.WellnessPlatformOrganization;
+import Business.UserAccount.UserAccount;
+import Business.WorkQueue.PharmacyWorkRequest;
+import Business.WorkQueue.WorkRequest;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import Business.DB4OUtil.DB4OUtil;
+import Business.Enterprise.ConsultationEnterprise;
+import Business.WorkQueue.FitnessWorkRequest;
+import java.awt.CardLayout;
+import java.awt.Component;
+
 /**
  *
  * @author ram
@@ -14,8 +38,24 @@ public class UserFitnessRequestJPanel extends javax.swing.JPanel {
     /**
      * Creates new form UserFitnessRequestJPanel
      */
-    public UserFitnessRequestJPanel() {
+    JPanel userProcessContainer;
+    private WellnessPlatformOrganization organization;
+    private Enterprise enterprise;
+    private UserAccount userAccount;
+    private  WellnessPlatformOrganization wellnessPlatformOrganization;
+    private Network network;
+    private EcoSystem system;
+     private DB4OUtil db = DB4OUtil.getInstance();
+
+    UserFitnessRequestJPanel(JPanel userProcessContainer, UserAccount userAccount, Enterprise enterprise, WellnessPlatformOrganization organization, EcoSystem system, Network network) {
         initComponents();
+        this.userProcessContainer= userProcessContainer;
+        this.userAccount=userAccount;
+        this.enterprise=enterprise;
+        this.wellnessPlatformOrganization=wellnessPlatformOrganization;
+        this.system=system;
+        this.network= network;
+        
     }
 
     /**
@@ -27,19 +67,172 @@ public class UserFitnessRequestJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        userHeightJTxtFld = new javax.swing.JTextField();
+        userWeightJTxtFld = new javax.swing.JTextField();
+        docReqJButton = new javax.swing.JButton();
+        backJButton = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+
+        jLabel1.setText("Height");
+
+        jLabel2.setText("weight");
+
+        userHeightJTxtFld.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userHeightJTxtFldActionPerformed(evt);
+            }
+        });
+
+        userWeightJTxtFld.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userWeightJTxtFldActionPerformed(evt);
+            }
+        });
+
+        docReqJButton.setText("Request Fitness Consultation");
+        docReqJButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                docReqJButtonActionPerformed(evt);
+            }
+        });
+
+        backJButton.setText("<--Back");
+        backJButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backJButtonActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("My Fitness");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 674, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(116, 116, 116)
+                .addComponent(backJButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 200, Short.MAX_VALUE)
+                .addComponent(docReqJButton)
+                .addGap(31, 31, 31))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(100, 100, 100)
+                                .addComponent(jLabel1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(92, 92, 92)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(userWeightJTxtFld, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                            .addComponent(userHeightJTxtFld)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(293, 293, 293)
+                        .addComponent(jLabel3)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 548, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(55, 55, 55)
+                .addComponent(jLabel3)
+                .addGap(43, 43, 43)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel1)
+                    .addComponent(userHeightJTxtFld, javax.swing.GroupLayout.PREFERRED_SIZE, 22, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(userWeightJTxtFld, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(45, 45, 45)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(docReqJButton)
+                    .addComponent(backJButton))
+                .addContainerGap(306, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void userHeightJTxtFldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userHeightJTxtFldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userHeightJTxtFldActionPerformed
+
+    private void userWeightJTxtFldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userWeightJTxtFldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userWeightJTxtFldActionPerformed
+
+    private void docReqJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_docReqJButtonActionPerformed
+        // TODO add your handling code here:
+        // send a
+        if(userHeightJTxtFld.getText().trim().equals("") && userWeightJTxtFld.getText().trim().equals("")){
+            JOptionPane.showMessageDialog(null, "please enter the name");
+            return;
+        }
+
+        FitnessWorkRequest userFC = new FitnessWorkRequest();
+        userFC.setHeight(Integer.parseInt(userHeightJTxtFld.getText().trim()));
+        userFC.setWeight(Integer.parseInt(userHeightJTxtFld.getText().trim()));
+        userFC.setSender(userAccount);
+        userFC.setStatus("Requested!!");
+
+        //get Doctor Org
+        Organization org = null;
+
+        for (Network network : system.getNetworkList()) {
+            for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
+                if (enterprise instanceof ConsultationEnterprise) {
+                    for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
+                        if (organization instanceof FitnessConsultationOrganization) {
+                            org = organization;
+                            break;
+                        }
+                    }
+                }
+
+            }
+        }
+
+       // System.out.println("Organisation is "+org.getName());
+
+        if (org!= null) {
+            org.getWorkQueue().getWorkRequestList().add(userFC);
+           // userAccount.getWorkQueue().getWorkRequestList().add(userFC); // add workqueue to org
+
+            JOptionPane.showMessageDialog(null, "Your Request has been sent to Fitness Consultant. You will recieve an email once the request is ready to process", "Information", JOptionPane.INFORMATION_MESSAGE);
+        }
+        System.out.println(org.getWorkQueue().getWorkRequestList().size());
+        db.storeSystem(system);
+        //ArrayList<WorkRequest> w = org.getWorkQueue().getWorkRequestList();
+        for(WorkRequest w: org.getWorkQueue().getWorkRequestList()){
+            FitnessWorkRequest pw = (FitnessWorkRequest)w;
+            System.out.println("phar req inside"+pw.getWeight());
+        } 
+
+    }//GEN-LAST:event_docReqJButtonActionPerformed
+
+    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+        // TODO add your handling code here:
+        userProcessContainer.remove(this);
+        Component[] componentArray = userProcessContainer.getComponents();
+        Component component = componentArray[componentArray.length - 1];
+        UserWorkAreaJPanel dw = (UserWorkAreaJPanel) component;
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+
+    }//GEN-LAST:event_backJButtonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton backJButton;
+    private javax.swing.JButton docReqJButton;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JTextField userHeightJTxtFld;
+    private javax.swing.JTextField userWeightJTxtFld;
     // End of variables declaration//GEN-END:variables
 }

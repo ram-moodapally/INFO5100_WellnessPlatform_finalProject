@@ -20,25 +20,8 @@ public class UserDoctorWorkRequest  extends WorkRequest{
     private int bloodPresure; // for Health consultation
     private int sugarLevel; // for health consultation
     private int calories; // for fitness
-    private UserAccount user;
-    private UserAccount doctor;
     private String status;
 
-    public UserAccount getUser() {
-        return user;
-    }
-
-    public void setUser(UserAccount user) {
-        this.user = user;
-    }
-
-    public UserAccount getDoctor() {
-        return doctor;
-    }
-
-    public void setDoctor(UserAccount doctor) {
-        this.doctor = doctor;
-    }
     public String getUserName() {
         return userName;
     }
