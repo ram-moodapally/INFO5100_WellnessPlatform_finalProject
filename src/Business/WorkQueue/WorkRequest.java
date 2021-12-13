@@ -19,6 +19,15 @@ public abstract class WorkRequest {
     private String status;
     private Date requestDate;
     private Date resolveDate;
+    private String result;
+
+    public String getResult() {
+        return result;
+    }
+
+    public void setResult(String result) {
+        this.result = result;
+    }
     
     public WorkRequest(){
         requestDate = new Date();

@@ -816,3 +816,90 @@ Current Enterprise	ecom
 Current Organization	Pharma Organisation
 Current Network	usa
 Logged in User RoleBusiness.Role.PharmacistRole
+Entering Main JFrame	userinterface.MainJFrame
+Logged in User RoleBusiness.Role.SystemAdminRole
+user adding enterpirse adminsuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+Logged in User RoleBusiness.Role.AdminRole
+Enterprise admin creating Organization 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Logged in User RoleBusiness.Role.SystemAdminRole
+user adding enterpirse adminsuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+Invalid credentials for user
+Logged in User RoleBusiness.Role.SystemAdminRole
+user adding enterpirse adminsuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+user creating enterpirseuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+Invalid credentials for user
+Logged in User RoleBusiness.Role.AdminRole
+Enterprise admin adding users 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin creating Organization 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Logged in User RoleBusiness.Role.SystemAdminRole
+user adding enterpirse adminsuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+Logged in User RoleBusiness.Role.AdminRole
+Enterprise admin adding Employee 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin creating Organization 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin adding Employee 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin adding following employee 	nutritionin following Organization 	Nutrition Consultation Organisation	userinterface.AdministrativeRole.ManageEmployeeJpanel
+Enterprise admin adding users 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin creating user with name 	nutritionRoleBusiness.Role.NutritionConsultantRoleIn OrganizationNutrition Consultation Organisation	userinterface.AdministrativeRole.ManageUserAccountJpanel
+Current Enterprise	cons
+Current Organization	Nutrition Consultation Organisation
+Current Network	usa
+Logged in User RoleBusiness.Role.NutritionConsultantRole
+Current Enterprise	cons
+Current Organization	Nutrition Consultation Organisation
+Current Network	usa
+Logged in User RoleBusiness.Role.NutritionConsultantRole
+Current Enterprise	cons
+Current Organization	Nutrition Consultation Organisation
+Current Network	usa
+Logged in User RoleBusiness.Role.NutritionConsultantRole
+Logged in User RoleBusiness.Role.SystemAdminRole
+user adding enterpirse adminsuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+Logged in User RoleBusiness.Role.AdminRole
+Enterprise admin creating Organization 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Logged in User RoleBusiness.Role.AdminRole
+Enterprise admin adding users 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin creating user with name 	nutriRoleBusiness.Role.NutritionConsultantRoleIn OrganizationNutrition Consultation Organisation	userinterface.AdministrativeRole.ManageUserAccountJpanel
+Entering Main JFrame	userinterface.MainJFrame
+Invalid credentials for user
+Current Enterprise	cons
+Current Organization	Nutrition Consultation Organisation
+Current Network	usa
+Logged in User RoleBusiness.Role.NutritionConsultantRole
+Entering Main JFrame	userinterface.MainJFrame
+Logged in User RoleBusiness.Role.SystemAdminRole
+user creating enterpirseuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+user adding enterpirse adminsuserinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel
+Invalid credentials for user
+Logged in User RoleBusiness.Role.AdminRole
+Enterprise admin adding Employee 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Logged in User RoleBusiness.Role.AdminRole
+Enterprise admin adding Employee 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Logged in User RoleBusiness.Role.AdminRole
+Enterprise admin adding Employee 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin adding following employee 	Nutriin following Organization 	Nutrition Consultation Organisation	userinterface.AdministrativeRole.ManageEmployeeJpanel
+Enterprise admin adding users 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin creating user with name 	nutriRoleBusiness.Role.NutritionConsultantRoleIn OrganizationNutrition Consultation Organisation	userinterface.AdministrativeRole.ManageUserAccountJpanel
+Current Enterprise	well
+Current Organization	WellnessPlatform
+Current Network	usa
+Logged in User RoleBusiness.Role.UserRole
+Entering Main JFrame	userinterface.MainJFrame
+Current Enterprise	well
+Current Organization	WellnessPlatform
+Current Network	usa
+Logged in User RoleBusiness.Role.UserRole
+Logged in User RoleBusiness.Role.AdminRole
+Enterprise admin adding Employee 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Enterprise admin adding users 	userinterface.AdministrativeRole.AdminWorkAreaJpanel
+Current Enterprise	cons
+Current Organization	Nutrition Consultation Organisation
+Current Network	usa
+Logged in User RoleBusiness.Role.NutritionConsultantRole
+Current Enterprise	cons
+Current Organization	Nutrition Consultation Organisation
+Current Network	usa
+Logged in User RoleBusiness.Role.NutritionConsultantRole
+Current Enterprise	well
+Current Organization	WellnessPlatform
+Current Network	usa
+Logged in User RoleBusiness.Role.UserRole

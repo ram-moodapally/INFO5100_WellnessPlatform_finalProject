@@ -8,10 +8,14 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.WellnessPlatformOrganization;
+import Business.Organization.NutritionConsultationOrganization;
+import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 import org.apache.log4j.Logger;
+import userinterface.NutritionConsultantRole.NutritionConsultantJPanel;
+import userinterface.SystemAdminWorkArea.ManageNetworkJPanel;
 
 
 /**
@@ -24,20 +28,22 @@ public class UserWorkAreaJPanel extends javax.swing.JPanel {
     private WellnessPlatformOrganization organization;
     private Enterprise enterprise;
     private UserAccount userAccount;
-    private  WellnessPlatformOrganization wellnessPlatformOrganization;
+    private WellnessPlatformOrganization wellnessPlatformOrganization;
+    private NutritionConsultationOrganization nutritionOrganisation;
     private Network network;
     private EcoSystem system;
     private static Logger log = Logger.getLogger(UserWorkAreaJPanel.class);
     private static final String CLASS_NAME = UserWorkAreaJPanel.class.getName();
-
+    
     /**
      * Creates new form DoctorWorkAreaJPanel
      */
-    public UserWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, WellnessPlatformOrganization organization, Enterprise enterprise, EcoSystem system, Network network) {
+    public UserWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem system, Network network) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.userAccount = account;
-        this.wellnessPlatformOrganization = wellnessPlatformOrganization;
+        this.wellnessPlatformOrganization = (WellnessPlatformOrganization) organization;
+        //this.nutritionOrganisation = (NutritionConsultationOrganization) organization;
         this.enterprise = enterprise;
         this.network = network;
         this.system = system;
@@ -161,12 +167,15 @@ public class UserWorkAreaJPanel extends javax.swing.JPanel {
     private void healthConsultationBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_healthConsultationBtnActionPerformed
         // TODO add your handling code here:
 
-         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-          log.debug("inside doctor role");
-          userProcessContainer.add("UserHealthConsultantRequestJPanel", new userinterface.UserRole.UserHealthConsultantRequestJPanel(userProcessContainer,userAccount,enterprise,organization,system,network));
+        // CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        //  log.debug("inside doctor role");
+        //  userProcessContainer.add("UserHealthConsultantRequestJPanel", new userinterface.UserRole.UserHealthConsultantRequestJPanel(userProcessContainer,userAccount,enterprise,wellnessPlatformOrganization,system,network));
        //  userProcessContainer.add("PrescriptionJPanel", new userinterface.DoctorRole.PrescriptionJPanel(userProcessContainer, userAccount, enterprise));
-         layout.next(userProcessContainer);
-
+        // layout.next(userProcessContainer);
+        UserNutritionRequestJPanel nutritionJPanel = new userinterface.UserRole.UserNutritionRequestJPanel(userProcessContainer,userAccount, enterprise,nutritionOrganisation,system,network);
+        userProcessContainer.add("NutritionJPanel",nutritionJPanel);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_healthConsultationBtnActionPerformed
 
     private void wellnessDataBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wellnessDataBtnActionPerformed
@@ -181,7 +190,10 @@ public class UserWorkAreaJPanel extends javax.swing.JPanel {
 
     private void nutritionConsultationBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nutritionConsultationBtnActionPerformed
         // TODO add your handling code here:
-        
+        UserNutritionRequestJPanel nutritionJPanel = new userinterface.UserRole.UserNutritionRequestJPanel(userProcessContainer,userAccount, enterprise,nutritionOrganisation,system,network);
+        userProcessContainer.add("NutritionJPanel",nutritionJPanel);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_nutritionConsultationBtnActionPerformed
 
     private void fitnessConsultationBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fitnessConsultationBtnActionPerformed

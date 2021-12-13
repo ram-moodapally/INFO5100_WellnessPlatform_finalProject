@@ -50,7 +50,7 @@ public class UserHealthConsultantRequestJPanel extends javax.swing.JPanel {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.userAccount = userAccount;
-        this.wellnessPlatformOrganization = wellnessPlatformOrganization;
+        this.wellnessPlatformOrganization = organization;
         this.enterprise = enterprise;
         this.network = network;
         this.system = system;

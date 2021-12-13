@@ -5,6 +5,23 @@
  */
 package userinterface.UserRole;
 
+import Business.EcoSystem;
+import Business.Enterprise.ConsultationEnterprise;
+import Business.Enterprise.Enterprise;
+import Business.Network.Network;
+import Business.Organization.HealthConsultationOrganization;
+import Business.Organization.NutritionConsultationOrganization;
+import Business.Organization.Organization;
+import Business.UserAccount.UserAccount;
+import Business.WorkQueue.NutritionistWorkRequest;
+import Business.WorkQueue.UserDoctorWorkRequest;
+import Business.WorkQueue.WorkRequest;
+import java.awt.CardLayout;
+import java.awt.Component;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
 /**
  *
  * @author ram
@@ -14,10 +31,30 @@ public class UserNutritionRequestJPanel extends javax.swing.JPanel {
     /**
      * Creates new form UserNutritionRequestJPanel
      */
-    public UserNutritionRequestJPanel() {
+    
+    JPanel userProcessContainer;
+    private Enterprise enterprise;
+    private UserAccount userAccount;
+    private  NutritionConsultationOrganization organization;
+    private Network network;
+    private EcoSystem system;
+   
+    
+    public UserNutritionRequestJPanel(JPanel userProcessContainer,UserAccount userAccount,Enterprise enterprise, NutritionConsultationOrganization organization,EcoSystem system,Network network) {
         initComponents();
+        
+        this.userProcessContainer = userProcessContainer;
+        this.userAccount = userAccount;
+        this. organization = organization;
+        this.enterprise = enterprise;
+        this.system = system;
+        this.network = network;
+        //network();
+        
     }
-
+    
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,19 +64,165 @@ public class UserNutritionRequestJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        txtName = new javax.swing.JTextField();
+        txtPhone = new javax.swing.JTextField();
+        btnSubmit = new javax.swing.JButton();
+        btnBack2 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+
+        jLabel1.setText("Name:");
+
+        jLabel2.setText("Phone Number:");
+
+        btnSubmit.setText("Book A Nutrition Consultation");
+        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSubmitActionPerformed(evt);
+            }
+        });
+
+        btnBack2.setBackground(new java.awt.Color(151, 170, 189));
+        btnBack2.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        btnBack2.setForeground(new java.awt.Color(49, 68, 85));
+        btnBack2.setText("Back");
+        btnBack2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBack2ActionPerformed(evt);
+            }
+        });
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Name", "Status", "Message"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 548, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(46, 46, 46)
+                        .addComponent(btnBack2)
+                        .addGap(255, 255, 255)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jLabel2))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(102, 102, 102)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 487, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(77, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(71, 71, 71)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addComponent(btnBack2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(btnSubmit)))
+                .addGap(84, 84, 84))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
+        // TODO add your handling code here:
+        if(txtName.getText().trim().equals("") && txtPhone.getText().trim().equals("")){
+            JOptionPane.showMessageDialog(null, "please enter the name");
+            return;
+        }
+        
+        NutritionistWorkRequest userN = new NutritionistWorkRequest();
+        userN.setName(txtName.getText());
+        //System.out.println("ented username is "+userHC.getUserName());
+        userN.setPhone(txtPhone.getText());  
+        userN.setSender(userAccount);
+        userN.setStatus("Waiting"); //STATUS IS REQUESTED HERE
+        
+        //get Doctor Org 
+        Organization org = null;
+        
+        for (Network network : system.getNetworkList()) {
+            for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
+                if (enterprise instanceof ConsultationEnterprise) {
+                    for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
+                        if (organization instanceof NutritionConsultationOrganization) {
+                            org = organization;
+                            break;
+                        }
+                    }
+                }
+
+            }
+        }
+        
+        //System.out.println("Organisation is "+org.getName());
+
+        if (org!= null) {
+            org.getWorkQueue().getWorkRequestList().add(userN);
+            // add workqueue to org
+            //System.out.println("inside queue"+userN.getUserName());
+            userAccount.getWorkQueue().getWorkRequestList().add(userN); // add workqueue to org 
+
+            JOptionPane.showMessageDialog(null, "Thanks for booking with us.", "Information", JOptionPane.INFORMATION_MESSAGE);
+        }
+        System.out.println(org.getWorkQueue().getWorkRequestList().size());
+        //db.storeSystem(system);
+        ArrayList<WorkRequest> w = org.getWorkQueue().getWorkRequestList();
+    }//GEN-LAST:event_btnSubmitActionPerformed
+
+    private void btnBack2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBack2ActionPerformed
+
+        userProcessContainer.remove(this);
+        Component[] componentArray = userProcessContainer.getComponents();
+        Component component = componentArray[componentArray.length - 1];
+        UserWorkAreaJPanel uwjp = (UserWorkAreaJPanel) component;
+        CardLayout layout = (CardLayout)userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+    }//GEN-LAST:event_btnBack2ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnBack1;
+    private javax.swing.JButton btnBack2;
+    private javax.swing.JButton btnSubmit;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTextField txtName;
+    private javax.swing.JTextField txtPhone;
     // End of variables declaration//GEN-END:variables
 }
