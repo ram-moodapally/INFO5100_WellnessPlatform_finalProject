@@ -46,27 +46,33 @@ public class ProcessOrderWorkRequest extends javax.swing.JPanel {
         btnComplete = new javax.swing.JButton();
         backJButton = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(153, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel1.setText("Result:");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 100, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 100, 30));
+
+        txtResult.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         add(txtResult, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 150, -1));
 
+        btnComplete.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnComplete.setText("Complete");
         btnComplete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCompleteActionPerformed(evt);
             }
         });
-        add(btnComplete, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, -1, -1));
+        add(btnComplete, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 180, 150, 50));
 
+        backJButton.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         backJButton.setText("Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
             }
         });
-        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, -1, -1));
+        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 110, 50));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCompleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompleteActionPerformed

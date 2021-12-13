@@ -72,24 +72,38 @@ public class ProcessOrderToMfrJPanel extends javax.swing.JPanel {
         txtQuantity = new javax.swing.JTextField();
         lblMedicineName = new javax.swing.JLabel();
         lblQuantity = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(153, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnOrderToMfr.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnOrderToMfr.setText("Order");
         btnOrderToMfr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOrderToMfrActionPerformed(evt);
             }
         });
-        add(btnOrderToMfr, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, -1, -1));
-        add(txtMedicineName, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 100, 110, -1));
-        add(txtQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 110, -1));
+        add(btnOrderToMfr, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 180, 60));
 
+        txtMedicineName.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        add(txtMedicineName, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, 110, -1));
+
+        txtQuantity.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        add(txtQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, 110, -1));
+
+        lblMedicineName.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lblMedicineName.setText("Medicine Name:");
-        add(lblMedicineName, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, -1, -1));
+        add(lblMedicineName, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, -1, -1));
 
+        lblQuantity.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lblQuantity.setText("Quantity:");
-        add(lblQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, -1, -1));
+        add(lblQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Place Order to Manufacturer");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 390, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnOrderToMfrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrderToMfrActionPerformed
@@ -136,6 +150,7 @@ public class ProcessOrderToMfrJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnOrderToMfr;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel lblMedicineName;
     private javax.swing.JLabel lblQuantity;
     private javax.swing.JTextField txtMedicineName;
