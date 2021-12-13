@@ -2,6 +2,23 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/Users/ram/Documents/GitHub/INFO5100_WellnessPlatform_finalProject/src/userinterface/RestaurantManagerRole/RestaurantMangerJPanel.java</file>
+            <file>file:/Users/ram/Documents/GitHub/INFO5100_WellnessPlatform_finalProject/src/userinterface/ManufacturerRole/ManufacturerJPanel.java</file>
+            <file>file:/Users/ram/Documents/GitHub/INFO5100_WellnessPlatform_finalProject/src/userinterface/HealthConsultantRole/HealthConsultantJPanel.java</file>
+            <file>file:/Users/ram/Documents/GitHub/INFO5100_WellnessPlatform_finalProject/src/userinterface/HealthConsultantRole/HealthConsultantPharmaJPanel.java</file>
+            <file>file:/Users/ram/Documents/GitHub/INFO5100_WellnessPlatform_finalProject/src/Business/Role/UserRole.java</file>
+            <file>file:/Users/ram/Documents/GitHub/INFO5100_WellnessPlatform_finalProject/src/Business/WorkQueue/UserDoctorWorkRequest.java</file>
+            <file>file:/Users/ram/Documents/GitHub/INFO5100_WellnessPlatform_finalProject/src/Business/Role/FitnessConsultantRole.java</file>
+            <file>file:/Users/ram/Documents/GitHub/INFO5100_WellnessPlatform_finalProject/src/Business/Role/NutritionConsultantRole.java</file>
+            <file>file:/Users/ram/Documents/GitHub/INFO5100_WellnessPlatform_finalProject/src/userinterface/Pharmacist/PharmacistJPanel.java</file>
+            <file>file:/Users/ram/Documents/GitHub/INFO5100_WellnessPlatform_finalProject/src/userinterface/UserRole/UserFitnessRequestJPanel.java</file>
+            <file>file:/Users/ram/Documents/GitHub/INFO5100_WellnessPlatform_finalProject/src/userinterface/FitnessConsultationRole/FitnessConsultationJPanel.java</file>
+            <file>file:/Users/ram/Documents/GitHub/INFO5100_WellnessPlatform_finalProject/src/userinterface/ManufacturerRole/ProcessManuWorkRequest.java</file>
+            <file>file:/Users/ram/Documents/GitHub/INFO5100_WellnessPlatform_finalProject/src/userinterface/Pharmacist/ProcessOrderWorkRequest.java</file>
+            <file>file:/Users/ram/Documents/GitHub/INFO5100_WellnessPlatform_finalProject/src/userinterface/UserRole/UserWellnessDataJPanel.java</file>
+            <file>file:/Users/ram/Documents/GitHub/INFO5100_WellnessPlatform_finalProject/src/userinterface/UserRole/UserNutritionRequestJPanel.java</file>
+            <file>file:/Users/ram/Documents/GitHub/INFO5100_WellnessPlatform_finalProject/src/userinterface/UserRole/UserWorkAreaJPanel.java</file>
+        </group>
     </open-files>
 </project-private>
