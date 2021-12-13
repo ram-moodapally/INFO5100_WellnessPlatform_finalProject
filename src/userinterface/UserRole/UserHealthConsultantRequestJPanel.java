@@ -77,23 +77,39 @@ public class UserHealthConsultantRequestJPanel extends javax.swing.JPanel {
         heartBeatJTxtFld = new javax.swing.JTextField();
         docReqJButton = new javax.swing.JButton();
         backJButton = new javax.swing.JButton();
+        userNameJTxtFld1 = new javax.swing.JTextField();
+        heartBeatJTxtFld1 = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        heartBeatJTxtFld2 = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        heartBeatJTxtFld3 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
 
-        jLabel1.setText("Username:");
+        setBackground(new java.awt.Color(153, 204, 255));
 
-        jLabel2.setText("Heart beat :");
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel1.setText("Name:");
 
+        jLabel2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel2.setText("BP:");
+
+        userNameJTxtFld.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         userNameJTxtFld.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userNameJTxtFldActionPerformed(evt);
             }
         });
 
+        heartBeatJTxtFld.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         heartBeatJTxtFld.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 heartBeatJTxtFldActionPerformed(evt);
             }
         });
 
+        docReqJButton.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
         docReqJButton.setText("Request Doctor Consultation");
         docReqJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,53 +117,128 @@ public class UserHealthConsultantRequestJPanel extends javax.swing.JPanel {
             }
         });
 
-        backJButton.setText("<--Back");
+        backJButton.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
+        backJButton.setText("<< Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
             }
         });
 
+        userNameJTxtFld1.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
+        userNameJTxtFld1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userNameJTxtFld1ActionPerformed(evt);
+            }
+        });
+
+        heartBeatJTxtFld1.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
+        heartBeatJTxtFld1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                heartBeatJTxtFld1ActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel3.setText("Respiration Rate:");
+
+        jLabel4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel4.setText("Body Temp:");
+
+        heartBeatJTxtFld2.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
+        heartBeatJTxtFld2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                heartBeatJTxtFld2ActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel5.setText("Pulse Rate:");
+
+        jLabel6.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("Enter the Details");
+
+        heartBeatJTxtFld3.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
+        heartBeatJTxtFld3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                heartBeatJTxtFld3ActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel7.setText("Message:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(92, 92, 92)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(jLabel1))
+                        .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(63, 63, 63)
+                        .addComponent(docReqJButton))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGap(63, 63, 63)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(heartBeatJTxtFld)
+                                .addComponent(userNameJTxtFld, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(92, 92, 92)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(heartBeatJTxtFld, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
-                    .addComponent(userNameJTxtFld))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(116, 116, 116)
-                .addComponent(backJButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
-                .addComponent(docReqJButton)
-                .addGap(31, 31, 31))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(heartBeatJTxtFld2, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(heartBeatJTxtFld1)
+                                .addComponent(userNameJTxtFld1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(heartBeatJTxtFld3, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(173, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(114, 114, 114)
+                .addGap(53, 53, 53)
+                .addComponent(jLabel6)
+                .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel1)
-                    .addComponent(userNameJTxtFld, javax.swing.GroupLayout.PREFERRED_SIZE, 22, Short.MAX_VALUE))
+                    .addComponent(userNameJTxtFld, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
                     .addComponent(heartBeatJTxtFld, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(45, 45, 45)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel3)
+                    .addComponent(userNameJTxtFld1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addComponent(heartBeatJTxtFld1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5)
+                    .addComponent(heartBeatJTxtFld2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(heartBeatJTxtFld3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(docReqJButton)
-                    .addComponent(backJButton))
-                .addContainerGap(203, Short.MAX_VALUE))
+                    .addComponent(docReqJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(173, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -217,13 +308,38 @@ public class UserHealthConsultantRequestJPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_backJButtonActionPerformed
 
+    private void userNameJTxtFld1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userNameJTxtFld1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userNameJTxtFld1ActionPerformed
+
+    private void heartBeatJTxtFld1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_heartBeatJTxtFld1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_heartBeatJTxtFld1ActionPerformed
+
+    private void heartBeatJTxtFld2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_heartBeatJTxtFld2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_heartBeatJTxtFld2ActionPerformed
+
+    private void heartBeatJTxtFld3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_heartBeatJTxtFld3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_heartBeatJTxtFld3ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backJButton;
     private javax.swing.JButton docReqJButton;
     private javax.swing.JTextField heartBeatJTxtFld;
+    private javax.swing.JTextField heartBeatJTxtFld1;
+    private javax.swing.JTextField heartBeatJTxtFld2;
+    private javax.swing.JTextField heartBeatJTxtFld3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField userNameJTxtFld;
+    private javax.swing.JTextField userNameJTxtFld1;
     // End of variables declaration//GEN-END:variables
 }

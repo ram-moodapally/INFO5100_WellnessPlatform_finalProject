@@ -84,7 +84,9 @@ public class PharmacistJPanel extends javax.swing.JPanel {
         tblPharmacyOrder = new javax.swing.JTable();
         btnProcess = new javax.swing.JButton();
         btnOrderToMfr = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(153, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblPharmacyOrder.setModel(new javax.swing.table.DefaultTableModel(
@@ -102,21 +104,28 @@ public class PharmacistJPanel extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, 120));
 
+        btnProcess.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         btnProcess.setText("Process");
         btnProcess.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProcessActionPerformed(evt);
             }
         });
-        add(btnProcess, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, -1, -1));
+        add(btnProcess, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 150, 40));
 
+        btnOrderToMfr.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         btnOrderToMfr.setText("Order");
         btnOrderToMfr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOrderToMfrActionPerformed(evt);
             }
         });
-        add(btnOrderToMfr, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 340, -1, -1));
+        add(btnOrderToMfr, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 330, 130, 40));
+
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Pharmacist Work Area");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 40, 450, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnProcessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcessActionPerformed
@@ -166,6 +175,7 @@ public class PharmacistJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnOrderToMfr;
     private javax.swing.JButton btnProcess;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblPharmacyOrder;
     // End of variables declaration//GEN-END:variables
