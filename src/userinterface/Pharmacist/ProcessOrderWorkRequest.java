@@ -50,7 +50,7 @@ public class ProcessOrderWorkRequest extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel1.setText("Result:");
+        jLabel1.setText("Message:");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 100, 30));
 
         txtResult.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -80,7 +80,7 @@ public class ProcessOrderWorkRequest extends javax.swing.JPanel {
 
         request.setResult(txtResult.getText());
         request.setStatus("Completed");
-        JOptionPane.showMessageDialog(this, "Order Delivered!");
+        JOptionPane.showMessageDialog(this, "Order Completed!");
         txtResult.setText("");
     }//GEN-LAST:event_btnCompleteActionPerformed
 
