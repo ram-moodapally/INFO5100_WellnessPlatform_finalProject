@@ -120,7 +120,7 @@ public class ManufacturerJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Please select a row to process this order");
             return;
         }
-        MfrWorkRequest manuRequest = (MfrWorkRequest) tblMfrOrderRequest.getValueAt(selectedRow, 0);
+        MfrWorkRequest manuRequest = (MfrWorkRequest) tblMfrOrderRequest.getValueAt(selectedRow, 3);
 
         if(!manuRequest.getStatus().equals("Ordered")){
             if(manuRequest.getStatus().equals("Processing")){

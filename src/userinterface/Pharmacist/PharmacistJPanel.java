@@ -59,11 +59,10 @@ public class PharmacistJPanel extends javax.swing.JPanel {
         for(WorkRequest request : pharmaOrganization.getWorkQueue().getWorkRequestList()){
             Object[] row = new Object[5];
         PharmacyWorkRequest pharmaRequest = (PharmacyWorkRequest) request;
-        row[1] = pharmaRequest.getMedicationName();
-        row[2] = pharmaRequest.getQuantity();
-        row[3] = pharmaRequest.getSender();
-        row[4] = pharmaRequest.getStatus();
-        row[0] = pharmaRequest;
+        row[0] = pharmaRequest.getMedicationName();
+        row[1] = pharmaRequest.getQuantity();
+        row[2] = pharmaRequest.getSender();
+        row[3] = pharmaRequest.getStatus();
        
         model.addRow(row);
         }
@@ -92,18 +91,18 @@ public class PharmacistJPanel extends javax.swing.JPanel {
 
         tblPharmacyOrder.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "object ", "Medicine", "Quantity", "Sender", "Status"
+                "Medicine ", "Quantity", "Sender", "Status"
             }
         ));
         jScrollPane1.setViewportView(tblPharmacyOrder);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, -1, 120));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, 120));
 
         btnProcess.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         btnProcess.setText("Process");

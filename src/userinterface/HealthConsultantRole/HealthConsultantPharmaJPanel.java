@@ -176,7 +176,7 @@ public class HealthConsultantPharmaJPanel extends javax.swing.JPanel {
         phar.setMedicationName(medicineJTxt.getText().trim());
         phar.setQuantity(Integer.parseInt(quantityJTxt.getText().trim())); // added username and HeartBeat 
         phar.setSender(userAccount);
-        phar.setStatus("Processing"); // set status to requested
+        phar.setStatus("Medicine Requested!!");
         
         //get Doctor Org 
         Organization org = null;
